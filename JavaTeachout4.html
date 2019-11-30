@@ -328,7 +328,7 @@ int main(int argc, const char * argv[]) {
                             <tr><td><code>someNumbers[1]</code></td><td>4</td><td>4</td></tr>
                             <tr><td><code>someNumbers[2]</code></td><td>6</td><td>6</td></tr>
                         </table>
-                        <p class="note">System A is an old Gateway running Windows 8.2, NetBeans 8.2, with Cygwin-Windows. System B is a MacBook Air running macOS Catalina (10.15.1), XCode 10.2.1, GNU C++ Compiler.</p>
+                        <p class="note">System A is an old Gateway running Windows 8.2, NetBeans 8.2, with Cygwin-Windows, GNU C++ compiler. System B is a MacBook Air running macOS Catalina (10.15.1), XCode 10.2.1, also with the GNU C++ Compiler.</p>
                     </section>
                 </section>
                 <section>
@@ -454,7 +454,7 @@ BUILD FAILED (total time: 0 seconds)</code></pre>
                     <section>
                         <h2>JavaScript Array Index Weirdness</h2>
                         <p>Unlike Java arrays, JavaScript arrays are not of a specific type, and so they can hold elements of any type.</p>
-                        <pre><code> &gt; var someNumbers[200] = "John Q. Public"
+                        <pre><code> &gt; someNumbers[200] = "John Q. Public"
  &gt; function f(n) { return n * n + n }
  &gt; someNumbers[201] = f</code></pre>
                     </section>
@@ -480,9 +480,9 @@ BUILD FAILED (total time: 0 seconds)</code></pre>
                         <pre><code>        char[] cardSuits = {'&spades;', '&hearts;', '&clubs;', '&diams;'};
         long badIndexA = 0L;
         cardSuits[badIndexA] = 's'; // ERROR !!!
-        float badIndexB = 0.0f;
+        float badIndexB = 1.0f;
         cardSuits[badIndexB] = 'h'; // ERROR !!!
-        double badIndexC = 0.0;
+        double badIndexC = 2.0;
         cardSuits[badIndexC] = 'c'; // ERROR !!!</code></pre>
                     </section>
                     <section>
@@ -499,7 +499,7 @@ BUILD FAILED (total time: 0 seconds)</code></pre>
         double[] moreNumbers = {1.25, Math.sqrt(2), 3.8, 
                                 Math.random(), 1e85};
     }</code></pre>
-                    <p>What is the length of...</p>
+                    <p>(click for answers) What is the length of...</p>
                     <ul>
                         <li onclick="this.innerHTML = this.innerHTML + ' 3';">... <code>someNumbers</code>?</li>
                         <li onclick="this.innerHTML = this.innerHTML + ' 5';">... <code>moreNumbers</code>?</li>
@@ -534,6 +534,16 @@ public class CommandLineArgsCounter {
     }
     
 }</code></pre>
+                    </section>
+                    <section>
+                        <h2>Running a Program From the Command Line</h2>
+                        <p>Exact file path will depend on your IDE, unless you move the pertinent bytecode files.</p>
+                        <pre><code>dev@lil-scamperooni 
+&gt; ~/NetBeansProjects/BasicExercises/build
+&gt; java -cp classes basicexercises.CommandLineArgsCounter 
+  arg1 arg2 arg3 arg4 arg5
+You entered 5 command line argument(s)
+</code></pre>
                     </section>
                 </section>
                 <section>
@@ -598,6 +608,10 @@ public class CommandLineArgsCounter {
                             <li>Copy the set to an array or to another collection</li>
                             <li>Clear out the set</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>Set Operations</h2>
+                        <p><b>NOTE:</b> You can try to add to a set an element that the set already contains. This should not cause any exception, but there should be some indication that the duplicate add was rejected.</p>
                     </section>
                     <section>
                         <h2>Examples of Sets</h2>
