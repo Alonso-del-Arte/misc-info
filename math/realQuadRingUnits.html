@@ -5,13 +5,24 @@
         <meta charset="utf&minus;8" />
         <meta http&minus;equiv="x&minus;ua&minus;compatible" content="ie=edge" />
         <meta name="viewport" content="width=device&minus;width, initial&minus;scale=1" />
-        <meta name="description" content="DESCRIPTION GOES HERE" />
-        <meta name="author" content="AUTHOR NAME GOES HERE" />
+        <meta name="description" content="Listing of fundamental units of some real quadratic rings" />
+        <meta name="author" content="Alonso del Arte" />
+        <style type="text/css"><!--
+            tr:nth-child(even) { background: #d8d8d8 }
+            td { font-size: 18pt; text-align: right; padding: 0.5em }
+            code { font-size: 8pt }
+            code:hover { font-size: inherit }
+        // --></style>
     </head>
     <body>
-        <h1>Units of real quadratic rings</h1>
+
+<h1>Units of real quadratic rings</h1>
+<p>The fundamental unit of a real quadratic integer ring is the smallest unit greater than 1. All other units can be obtained by a combination of powers, conjugates and negation.</p>
+<p>These results were obtained with my Algebraic Integer Calculator program (see the <a href="https://github.com/Alonso-del-Arte/algebraic-integer-calculator">GitHub repository</a>). The program is limited to quadratic integers with real and imaginary parts that can be represented by 32-bit integers. It didn't seem like a problem for drawing diagrams of prime numbers in imaginary quadratic rings, since, without the ability to drag the diagram, even on an 8K display there is no risk of overflow.</p>
+<p>However, for the task of finding the units of real quadratic rings, this limitation quickly becomes a serious problem. Going in ascending order by <i>d</i>, this first manifests itself for &#x2124;[&radic;199]. Rather than expand the type or seek the answers for those affected domains elsewhere, I have simply put in the exception messages.</p>
 
 <table>
+<tr><th><i>d</i></th><th>Ring</th><th>Unit</th><th>Norm</th></tr>
 <tr><td>2</td><td>&#x2124;[&radic;2]</td><td>1 + &radic;(2)</td><td>&minus;1</td></tr>
 <tr><td>3</td><td>&#x2124;[&radic;3]</td><td>2 + &radic;(3)</td><td>1</td></tr>
 <tr><td>5</td><td>&#x2124;[&phi;]</td><td>1/2 + &radic;(5)/2</td><td>&minus;1</td></tr>
@@ -72,8 +83,252 @@
 <tr><td>94</td><td>&#x2124;[&radic;94]</td><td>2143295 + 221064&radic;(94)</td><td>1</td></tr>
 <tr><td>95</td><td>&#x2124;[&radic;95]</td><td>39 + 4&radic;(95)</td><td>1</td></tr>
 <tr><td>97</td><td><i>O</i><sub>&#x211A;(&radic;(97))</sub></td><td>5604 + 569&radic;(97)</td><td>&minus;1</td></tr>
+<tr><td>101</td><td><i>O</i><sub>&#x211A;(&radic;(101))</sub></td><td>10 + &radic;(101)</td><td>&minus;1</td></tr>
+<tr><td>102</td><td>&#x2124;[&radic;102]</td><td>101 + 10&radic;(102)</td><td>1</td></tr>
+<tr><td>103</td><td>&#x2124;[&radic;103]</td><td>227528 + 22419&radic;(103)</td><td>1</td></tr>
+<tr><td>105</td><td><i>O</i><sub>&#x211A;(&radic;(105))</sub></td><td>41 + 4&radic;(105)</td><td>1</td></tr>
+<tr><td>106</td><td>&#x2124;[&radic;106]</td><td>4005 + 389&radic;(106)</td><td>&minus;1</td></tr>
+<tr><td>107</td><td>&#x2124;[&radic;107]</td><td>962 + 93&radic;(107)</td><td>1</td></tr>
+<tr><td>109</td><td><i>O</i><sub>&#x211A;(&radic;(109))</sub></td><td>261/2 + 25&radic;(109)/2</td><td>&minus;1</td></tr>
+<tr><td>110</td><td>&#x2124;[&radic;110]</td><td>21 + 2&radic;(110)</td><td>1</td></tr>
+<tr><td>111</td><td>&#x2124;[&radic;111]</td><td>295 + 28&radic;(111)</td><td>1</td></tr>
+<tr><td>113</td><td><i>O</i><sub>&#x211A;(&radic;(113))</sub></td><td>776 + 73&radic;(113)</td><td>&minus;1</td></tr>
+<tr><td>114</td><td>&#x2124;[&radic;114]</td><td>1025 + 96&radic;(114)</td><td>1</td></tr>
+<tr><td>115</td><td>&#x2124;[&radic;115]</td><td>1126 + 105&radic;(115)</td><td>1</td></tr>
+<tr><td>118</td><td>&#x2124;[&radic;118]</td><td>306917 + 28254&radic;(118)</td><td>1</td></tr>
+<tr><td>119</td><td>&#x2124;[&radic;119]</td><td>120 + 11&radic;(119)</td><td>1</td></tr>
+<tr><td>122</td><td>&#x2124;[&radic;122]</td><td>11 + &radic;(122)</td><td>&minus;1</td></tr>
+<tr><td>123</td><td>&#x2124;[&radic;123]</td><td>122 + 11&radic;(123)</td><td>1</td></tr>
+<tr><td>127</td><td>&#x2124;[&radic;127]</td><td>4730624 + 419775&radic;(127)</td><td>1</td></tr>
+<tr><td>129</td><td><i>O</i><sub>&#x211A;(&radic;(129))</sub></td><td>16855 + 1484&radic;(129)</td><td>1</td></tr>
+<tr><td>130</td><td>&#x2124;[&radic;130]</td><td>57 + 5&radic;(130)</td><td>&minus;1</td></tr>
+<tr><td>131</td><td>&#x2124;[&radic;131]</td><td>10610 + 927&radic;(131)</td><td>1</td></tr>
+<tr><td>133</td><td><i>O</i><sub>&#x211A;(&radic;(133))</sub></td><td>173/2 + 15&radic;(133)/2</td><td>1</td></tr>
+<tr><td>134</td><td>&#x2124;[&radic;134]</td><td>145925 + 12606&radic;(134)</td><td>1</td></tr>
+<tr><td>137</td><td><i>O</i><sub>&#x211A;(&radic;(137))</sub></td><td>1744 + 149&radic;(137)</td><td>&minus;1</td></tr>
+<tr><td>138</td><td>&#x2124;[&radic;138]</td><td>47 + 4&radic;(138)</td><td>1</td></tr>
+<tr><td>139</td><td>&#x2124;[&radic;139]</td><td>77563250 + 6578829&radic;(139)</td><td>1</td></tr>
+<tr><td>141</td><td><i>O</i><sub>&#x211A;(&radic;(141))</sub></td><td>95 + 8&radic;(141)</td><td>1</td></tr>
+<tr><td>142</td><td>&#x2124;[&radic;142]</td><td>143 + 12&radic;(142)</td><td>1</td></tr>
+<tr><td>143</td><td>&#x2124;[&radic;143]</td><td>12 + &radic;(143)</td><td>1</td></tr>
+<tr><td>145</td><td><i>O</i><sub>&#x211A;(&radic;(145))</sub></td><td>12 + &radic;(145)</td><td>&minus;1</td></tr>
+<tr><td>146</td><td>&#x2124;[&radic;146]</td><td>145 + 12&radic;(146)</td><td>1</td></tr>
+<tr><td>149</td><td><i>O</i><sub>&#x211A;(&radic;(149))</sub></td><td>61/2 + 5&radic;(149)/2</td><td>&minus;1</td></tr>
+<tr><td>151</td><td>&#x2124;[&radic;151]</td><td>1728148040 + 140634693&radic;(151)</td><td>1</td></tr>
+<tr><td>154</td><td>&#x2124;[&radic;154]</td><td>21295 + 1716&radic;(154)</td><td>1</td></tr>
+<tr><td>155</td><td>&#x2124;[&radic;155]</td><td>249 + 20&radic;(155)</td><td>1</td></tr>
+<tr><td>157</td><td><i>O</i><sub>&#x211A;(&radic;(157))</sub></td><td>213/2 + 17&radic;(157)/2</td><td>&minus;1</td></tr>
+<tr><td>158</td><td>&#x2124;[&radic;158]</td><td>7743 + 616&radic;(158)</td><td>1</td></tr>
+<tr><td>159</td><td>&#x2124;[&radic;159]</td><td>1324 + 105&radic;(159)</td><td>1</td></tr>
+<tr><td>161</td><td><i>O</i><sub>&#x211A;(&radic;(161))</sub></td><td>11775 + 928&radic;(161)</td><td>1</td></tr>
+<tr><td>163</td><td>&#x2124;[&radic;163]</td><td>64080026 + 5019135&radic;(163)</td><td>1</td></tr>
+<tr><td>165</td><td><i>O</i><sub>&#x211A;(&radic;(165))</sub></td><td>13/2 + &radic;(165)/2</td><td>1</td></tr>
+<tr><td>166</td><td>&#x2124;[&radic;166]</td><td>1700902565 + 132015642&radic;(166)</td><td>1</td></tr>
+<tr><td>167</td><td>&#x2124;[&radic;167]</td><td>168 + 13&radic;(167)</td><td>1</td></tr>
+<tr><td>170</td><td>&#x2124;[&radic;170]</td><td>13 + &radic;(170)</td><td>&minus;1</td></tr>
+<tr><td>173</td><td><i>O</i><sub>&#x211A;(&radic;(173))</sub></td><td>13/2 + &radic;(173)/2</td><td>&minus;1</td></tr>
+<tr><td>174</td><td>&#x2124;[&radic;174]</td><td>1451 + 110&radic;(174)</td><td>1</td></tr>
+<tr><td>177</td><td><i>O</i><sub>&#x211A;(&radic;(177))</sub></td><td>62423 + 4692&radic;(177)</td><td>1</td></tr>
+<tr><td>178</td><td>&#x2124;[&radic;178]</td><td>1601 + 120&radic;(178)</td><td>1</td></tr>
+<tr><td>179</td><td>&#x2124;[&radic;179]</td><td>4190210 + 313191&radic;(179)</td><td>1</td></tr>
+<tr><td>181</td><td><i>O</i><sub>&#x211A;(&radic;(181))</sub></td><td>1305/2 + 97&radic;(181)/2</td><td>&minus;1</td></tr>
+<tr><td>182</td><td>&#x2124;[&radic;182]</td><td>27 + 2&radic;(182)</td><td>1</td></tr>
+<tr><td>183</td><td>&#x2124;[&radic;183]</td><td>487 + 36&radic;(183)</td><td>1</td></tr>
+<tr><td>185</td><td><i>O</i><sub>&#x211A;(&radic;(185))</sub></td><td>68 + 5&radic;(185)</td><td>&minus;1</td></tr>
+<tr><td>186</td><td>&#x2124;[&radic;186]</td><td>7501 + 550&radic;(186)</td><td>1</td></tr>
+<tr><td>187</td><td>&#x2124;[&radic;187]</td><td>1682 + 123&radic;(187)</td><td>1</td></tr>
+<tr><td>190</td><td>&#x2124;[&radic;190]</td><td>52021 + 3774&radic;(190)</td><td>1</td></tr>
+<tr><td>191</td><td>&#x2124;[&radic;191]</td><td>8994000 + 650783&radic;(191)</td><td>1</td></tr>
+<tr><td>193</td><td><i>O</i><sub>&#x211A;(&radic;(193))</sub></td><td>1764132 + 126985&radic;(193)</td><td>&minus;1</td></tr>
+<tr><td>194</td><td>&#x2124;[&radic;194]</td><td>195 + 14&radic;(194)</td><td>1</td></tr>
+<tr><td>195</td><td>&#x2124;[&radic;195]</td><td>14 + &radic;(195)</td><td>1</td></tr>
+<tr><td>197</td><td><i>O</i><sub>&#x211A;(&radic;(197))</sub></td><td>14 + &radic;(197)</td><td>&minus;1</td></tr>
+<tr><td>199</td><td>&#x2124;[&radic;199]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483642 + 152231080sqrt(199)</code></td></tr>
+<tr><td>201</td><td><i>O</i><sub>&#x211A;(&radic;(201))</sub></td><td>515095 + 36332&radic;(201)</td><td>1</td></tr>
+<tr><td>202</td><td>&#x2124;[&radic;202]</td><td>3141 + 221&radic;(202)</td><td>&minus;1</td></tr>
+<tr><td>203</td><td>&#x2124;[&radic;203]</td><td>57 + 4&radic;(203)</td><td>1</td></tr>
+<tr><td>205</td><td><i>O</i><sub>&#x211A;(&radic;(205))</sub></td><td>43/2 + 3&radic;(205)/2</td><td>1</td></tr>
+<tr><td>206</td><td>&#x2124;[&radic;206]</td><td>59535 + 4148&radic;(206)</td><td>1</td></tr>
+<tr><td>209</td><td><i>O</i><sub>&#x211A;(&radic;(209))</sub></td><td>46551 + 3220&radic;(209)</td><td>1</td></tr>
+<tr><td>210</td><td>&#x2124;[&radic;210]</td><td>29 + 2&radic;(210)</td><td>1</td></tr>
+<tr><td>211</td><td>&#x2124;[&radic;211]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483636 + 147838872sqrt(211)</code></td></tr>
+<tr><td>213</td><td><i>O</i><sub>&#x211A;(&radic;(213))</sub></td><td>73/2 + 5&radic;(213)/2</td><td>1</td></tr>
+<tr><td>214</td><td>&#x2124;[&radic;214]</td><td colspan="2"><code>Real part of sum exceeds int data<br />type: 2147483648 + 146798960sqrt(214)</code></td></tr>
+<tr><td>215</td><td>&#x2124;[&radic;215]</td><td>44 + 3&radic;(215)</td><td>1</td></tr>
+<tr><td>217</td><td><i>O</i><sub>&#x211A;(&radic;(217))</sub></td><td>3844063 + 260952&radic;(217)</td><td>1</td></tr>
+<tr><td>218</td><td>&#x2124;[&radic;218]</td><td>251 + 17&radic;(218)</td><td>&minus;1</td></tr>
+<tr><td>219</td><td>&#x2124;[&radic;219]</td><td>74 + 5&radic;(219)</td><td>1</td></tr>
+<tr><td>221</td><td><i>O</i><sub>&#x211A;(&radic;(221))</sub></td><td>15/2 + &radic;(221)/2</td><td>1</td></tr>
+<tr><td>222</td><td>&#x2124;[&radic;222]</td><td>149 + 10&radic;(222)</td><td>1</td></tr>
+<tr><td>223</td><td>&#x2124;[&radic;223]</td><td>224 + 15&radic;(223)</td><td>1</td></tr>
+<tr><td>226</td><td>&#x2124;[&radic;226]</td><td>15 + &radic;(226)</td><td>&minus;1</td></tr>
+<tr><td>227</td><td>&#x2124;[&radic;227]</td><td>226 + 15&radic;(227)</td><td>1</td></tr>
+<tr><td>229</td><td><i>O</i><sub>&#x211A;(&radic;(229))</sub></td><td>15/2 + &radic;(229)/2</td><td>&minus;1</td></tr>
+<tr><td>230</td><td>&#x2124;[&radic;230]</td><td>91 + 6&radic;(230)</td><td>1</td></tr>
+<tr><td>231</td><td>&#x2124;[&radic;231]</td><td>76 + 5&radic;(231)</td><td>1</td></tr>
+<tr><td>233</td><td><i>O</i><sub>&#x211A;(&radic;(233))</sub></td><td>23156 + 1517&radic;(233)</td><td>&minus;1</td></tr>
+<tr><td>235</td><td>&#x2124;[&radic;235]</td><td>46 + 3&radic;(235)</td><td>1</td></tr>
+<tr><td>237</td><td><i>O</i><sub>&#x211A;(&radic;(237))</sub></td><td>77/2 + 5&radic;(237)/2</td><td>1</td></tr>
+<tr><td>238</td><td>&#x2124;[&radic;238]</td><td>11663 + 756&radic;(238)</td><td>1</td></tr>
+<tr><td>239</td><td>&#x2124;[&radic;239]</td><td>6195120 + 400729&radic;(239)</td><td>1</td></tr>
+<tr><td>241</td><td><i>O</i><sub>&#x211A;(&radic;(241))</sub></td><td>71011068 + 4574225&radic;(241)</td><td>&minus;1</td></tr>
+<tr><td>246</td><td>&#x2124;[&radic;246]</td><td>88805 + 5662&radic;(246)</td><td>1</td></tr>
+<tr><td>247</td><td>&#x2124;[&radic;247]</td><td>85292 + 5427&radic;(247)</td><td>1</td></tr>
+<tr><td>249</td><td><i>O</i><sub>&#x211A;(&radic;(249))</sub></td><td>8553815 + 542076&radic;(249)</td><td>1</td></tr>
+<tr><td>251</td><td>&#x2124;[&radic;251]</td><td>3674890 + 231957&radic;(251)</td><td>1</td></tr>
+<tr><td>253</td><td><i>O</i><sub>&#x211A;(&radic;(253))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483635 + 135011141sqrt(253)</code></td></tr>
+<tr><td>254</td><td>&#x2124;[&radic;254]</td><td>255 + 16&radic;(254)</td><td>1</td></tr>
+<tr><td>255</td><td>&#x2124;[&radic;255]</td><td>16 + &radic;(255)</td><td>1</td></tr>
+<tr><td>257</td><td><i>O</i><sub>&#x211A;(&radic;(257))</sub></td><td>16 + &radic;(257)</td><td>&minus;1</td></tr>
+<tr><td>258</td><td>&#x2124;[&radic;258]</td><td>257 + 16&radic;(258)</td><td>1</td></tr>
+<tr><td>259</td><td>&#x2124;[&radic;259]</td><td>847225 + 52644&radic;(259)</td><td>1</td></tr>
+<tr><td>262</td><td>&#x2124;[&radic;262]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483645 + 132671983sqrt(262)</code></td></tr>
+<tr><td>263</td><td>&#x2124;[&radic;263]</td><td>139128 + 8579&radic;(263)</td><td>1</td></tr>
+<tr><td>265</td><td><i>O</i><sub>&#x211A;(&radic;(265))</sub></td><td>6072 + 373&radic;(265)</td><td>&minus;1</td></tr>
+<tr><td>266</td><td>&#x2124;[&radic;266]</td><td>685 + 42&radic;(266)</td><td>1</td></tr>
+<tr><td>267</td><td>&#x2124;[&radic;267]</td><td>2402 + 147&radic;(267)</td><td>1</td></tr>
+<tr><td>269</td><td><i>O</i><sub>&#x211A;(&radic;(269))</sub></td><td>82 + 5&radic;(269)</td><td>&minus;1</td></tr>
+<tr><td>271</td><td>&#x2124;[&radic;271]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483638 + 130450342sqrt(271)</code></td></tr>
+<tr><td>273</td><td><i>O</i><sub>&#x211A;(&radic;(273))</sub></td><td>727 + 44&radic;(273)</td><td>1</td></tr>
+<tr><td>274</td><td>&#x2124;[&radic;274]</td><td>1407 + 85&radic;(274)</td><td>&minus;1</td></tr>
+<tr><td>277</td><td><i>O</i><sub>&#x211A;(&radic;(277))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483634 + 129029788sqrt(277)</code></td></tr>
+<tr><td>278</td><td>&#x2124;[&radic;278]</td><td>2501 + 150&radic;(278)</td><td>1</td></tr>
+<tr><td>281</td><td><i>O</i><sub>&#x211A;(&radic;(281))</sub></td><td>1063532 + 63445&radic;(281)</td><td>&minus;1</td></tr>
+<tr><td>282</td><td>&#x2124;[&radic;282]</td><td>2351 + 140&radic;(282)</td><td>1</td></tr>
+<tr><td>283</td><td>&#x2124;[&radic;283]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483640 + 127654653sqrt(283)</code></td></tr>
+<tr><td>285</td><td><i>O</i><sub>&#x211A;(&radic;(285))</sub></td><td>17/2 + &radic;(285)/2</td><td>1</td></tr>
+<tr><td>286</td><td>&#x2124;[&radic;286]</td><td>561835 + 33222&radic;(286)</td><td>1</td></tr>
+<tr><td>287</td><td>&#x2124;[&radic;287]</td><td>288 + 17&radic;(287)</td><td>1</td></tr>
+<tr><td>290</td><td>&#x2124;[&radic;290]</td><td>17 + &radic;(290)</td><td>&minus;1</td></tr>
+<tr><td>291</td><td>&#x2124;[&radic;291]</td><td>290 + 17&radic;(291)</td><td>1</td></tr>
+<tr><td>293</td><td><i>O</i><sub>&#x211A;(&radic;(293))</sub></td><td>17/2 + &radic;(293)/2</td><td>&minus;1</td></tr>
+<tr><td>295</td><td>&#x2124;[&radic;295]</td><td>2024999 + 117900&radic;(295)</td><td>1</td></tr>
+<tr><td>298</td><td>&#x2124;[&radic;298]</td><td>409557 + 23725&radic;(298)</td><td>&minus;1</td></tr>
+<tr><td>299</td><td>&#x2124;[&radic;299]</td><td>415 + 24&radic;(299)</td><td>1</td></tr>
+<tr><td>301</td><td><i>O</i><sub>&#x211A;(&radic;(301))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483642 + 123778900sqrt(301)</code></td></tr>
+<tr><td>302</td><td>&#x2124;[&radic;302]</td><td>4276623 + 246092&radic;(302)</td><td>1</td></tr>
+<tr><td>303</td><td>&#x2124;[&radic;303]</td><td>2524 + 145&radic;(303)</td><td>1</td></tr>
+<tr><td>305</td><td><i>O</i><sub>&#x211A;(&radic;(305))</sub></td><td>489 + 28&radic;(305)</td><td>1</td></tr>
+<tr><td>307</td><td>&#x2124;[&radic;307]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483639 + 122563366sqrt(307)</code></td></tr>
+<tr><td>309</td><td><i>O</i><sub>&#x211A;(&radic;(309))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483637 + 122166077sqrt(309)</code></td></tr>
+<tr><td>310</td><td>&#x2124;[&radic;310]</td><td>848719 + 48204&radic;(310)</td><td>1</td></tr>
+<tr><td>311</td><td>&#x2124;[&radic;311]</td><td>16883880 + 957397&radic;(311)</td><td>1</td></tr>
+<tr><td>313</td><td><i>O</i><sub>&#x211A;(&radic;(313))</sub></td><td>126862368 + 7170685&radic;(313)</td><td>&minus;1</td></tr>
+<tr><td>314</td><td>&#x2124;[&radic;314]</td><td>443 + 25&radic;(314)</td><td>&minus;1</td></tr>
+<tr><td>317</td><td><i>O</i><sub>&#x211A;(&radic;(317))</sub></td><td>89/2 + 5&radic;(317)/2</td><td>&minus;1</td></tr>
+<tr><td>318</td><td>&#x2124;[&radic;318]</td><td>107 + 6&radic;(318)</td><td>1</td></tr>
+<tr><td>319</td><td>&#x2124;[&radic;319]</td><td>12901780 + 722361&radic;(319)</td><td>1</td></tr>
+<tr><td>321</td><td><i>O</i><sub>&#x211A;(&radic;(321))</sub></td><td>215 + 12&radic;(321)</td><td>1</td></tr>
+<tr><td>322</td><td>&#x2124;[&radic;322]</td><td>323 + 18&radic;(322)</td><td>1</td></tr>
+<tr><td>323</td><td>&#x2124;[&radic;323]</td><td>18 + &radic;(323)</td><td>1</td></tr>
+<tr><td>326</td><td>&#x2124;[&radic;326]</td><td>325 + 18&radic;(326)</td><td>1</td></tr>
+<tr><td>327</td><td>&#x2124;[&radic;327]</td><td>217 + 12&radic;(327)</td><td>1</td></tr>
+<tr><td>329</td><td><i>O</i><sub>&#x211A;(&radic;(329))</sub></td><td>2376415 + 131016&radic;(329)</td><td>1</td></tr>
+<tr><td>330</td><td>&#x2124;[&radic;330]</td><td>109 + 6&radic;(330)</td><td>1</td></tr>
+<tr><td>331</td><td>&#x2124;[&radic;331]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483637 + 118036377sqrt(331)</code></td></tr>
+<tr><td>334</td><td>&#x2124;[&radic;334]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483633 + 117505078sqrt(334)</code></td></tr>
+<tr><td>335</td><td>&#x2124;[&radic;335]</td><td>604 + 33&radic;(335)</td><td>1</td></tr>
+<tr><td>337</td><td><i>O</i><sub>&#x211A;(&radic;(337))</sub></td><td>1015827336 + 55335641&radic;(337)</td><td>&minus;1</td></tr>
+<tr><td>339</td><td>&#x2124;[&radic;339]</td><td>97970 + 5321&radic;(339)</td><td>1</td></tr>
+<tr><td>341</td><td><i>O</i><sub>&#x211A;(&radic;(341))</sub></td><td>277/2 + 15&radic;(341)/2</td><td>1</td></tr>
+<tr><td>345</td><td><i>O</i><sub>&#x211A;(&radic;(345))</sub></td><td>6761 + 364&radic;(345)</td><td>1</td></tr>
+<tr><td>346</td><td>&#x2124;[&radic;346]</td><td>93 + 5&radic;(346)</td><td>&minus;1</td></tr>
+<tr><td>347</td><td>&#x2124;[&radic;347]</td><td>641602 + 34443&radic;(347)</td><td>1</td></tr>
+<tr><td>349</td><td><i>O</i><sub>&#x211A;(&radic;(349))</sub></td><td>9210 + 493&radic;(349)</td><td>&minus;1</td></tr>
+<tr><td>353</td><td><i>O</i><sub>&#x211A;(&radic;(353))</sub></td><td>71264 + 3793&radic;(353)</td><td>&minus;1</td></tr>
+<tr><td>354</td><td>&#x2124;[&radic;354]</td><td>258065 + 13716&radic;(354)</td><td>1</td></tr>
+<tr><td>355</td><td>&#x2124;[&radic;355]</td><td>954809 + 50676&radic;(355)</td><td>1</td></tr>
+<tr><td>357</td><td><i>O</i><sub>&#x211A;(&radic;(357))</sub></td><td>19/2 + &radic;(357)/2</td><td>1</td></tr>
+<tr><td>358</td><td>&#x2124;[&radic;358]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483638 + 113498038sqrt(358)</code></td></tr>
+<tr><td>359</td><td>&#x2124;[&radic;359]</td><td>360 + 19&radic;(359)</td><td>1</td></tr>
+<tr><td>362</td><td>&#x2124;[&radic;362]</td><td>19 + &radic;(362)</td><td>&minus;1</td></tr>
+<tr><td>365</td><td><i>O</i><sub>&#x211A;(&radic;(365))</sub></td><td>19/2 + &radic;(365)/2</td><td>&minus;1</td></tr>
+<tr><td>366</td><td>&#x2124;[&radic;366]</td><td>907925 + 47458&radic;(366)</td><td>1</td></tr>
+<tr><td>367</td><td>&#x2124;[&radic;367]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483647 + 112097734sqrt(367)</code></td></tr>
+<tr><td>370</td><td>&#x2124;[&radic;370]</td><td>327 + 17&radic;(370)</td><td>&minus;1</td></tr>
+<tr><td>371</td><td>&#x2124;[&radic;371]</td><td>1695 + 88&radic;(371)</td><td>1</td></tr>
+<tr><td>373</td><td><i>O</i><sub>&#x211A;(&radic;(373))</sub></td><td>5118 + 265&radic;(373)</td><td>&minus;1</td></tr>
+<tr><td>374</td><td>&#x2124;[&radic;374]</td><td>3365 + 174&radic;(374)</td><td>1</td></tr>
+<tr><td>377</td><td><i>O</i><sub>&#x211A;(&radic;(377))</sub></td><td>233 + 12&radic;(377)</td><td>1</td></tr>
+<tr><td>379</td><td>&#x2124;[&radic;379]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483638 + 110308826sqrt(379)</code></td></tr>
+<tr><td>381</td><td><i>O</i><sub>&#x211A;(&radic;(381))</sub></td><td>1015 + 52&radic;(381)</td><td>1</td></tr>
+<tr><td>382</td><td>&#x2124;[&radic;382]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483646 + 109874822sqrt(382)</code></td></tr>
+<tr><td>383</td><td>&#x2124;[&radic;383]</td><td>18768 + 959&radic;(383)</td><td>1</td></tr>
+<tr><td>385</td><td><i>O</i><sub>&#x211A;(&radic;(385))</sub></td><td>95831 + 4884&radic;(385)</td><td>1</td></tr>
+<tr><td>386</td><td>&#x2124;[&radic;386]</td><td>111555 + 5678&radic;(386)</td><td>1</td></tr>
+<tr><td>389</td><td><i>O</i><sub>&#x211A;(&radic;(389))</sub></td><td>1282 + 65&radic;(389)</td><td>&minus;1</td></tr>
+<tr><td>390</td><td>&#x2124;[&radic;390]</td><td>79 + 4&radic;(390)</td><td>1</td></tr>
+<tr><td>391</td><td>&#x2124;[&radic;391]</td><td>7338680 + 371133&radic;(391)</td><td>1</td></tr>
+<tr><td>393</td><td><i>O</i><sub>&#x211A;(&radic;(393))</sub></td><td>46437143 + 2342444&radic;(393)</td><td>1</td></tr>
+<tr><td>394</td><td>&#x2124;[&radic;394]</td><td>395023035 + 19900973&radic;(394)</td><td>&minus;1</td></tr>
+<tr><td>395</td><td>&#x2124;[&radic;395]</td><td>159 + 8&radic;(395)</td><td>1</td></tr>
+<tr><td>397</td><td><i>O</i><sub>&#x211A;(&radic;(397))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483643 + 107779115sqrt(397)</code></td></tr>
+<tr><td>398</td><td>&#x2124;[&radic;398]</td><td>399 + 20&radic;(398)</td><td>1</td></tr>
+<tr><td>399</td><td>&#x2124;[&radic;399]</td><td>20 + &radic;(399)</td><td>1</td></tr>
+<tr><td>401</td><td><i>O</i><sub>&#x211A;(&radic;(401))</sub></td><td>20 + &radic;(401)</td><td>&minus;1</td></tr>
+<tr><td>402</td><td>&#x2124;[&radic;402]</td><td>401 + 20&radic;(402)</td><td>1</td></tr>
+<tr><td>403</td><td>&#x2124;[&radic;403]</td><td>669878 + 33369&radic;(403)</td><td>1</td></tr>
+<tr><td>406</td><td>&#x2124;[&radic;406]</td><td>59468095 + 2951352&radic;(406)</td><td>1</td></tr>
+<tr><td>407</td><td>&#x2124;[&radic;407]</td><td>2663 + 132&radic;(407)</td><td>1</td></tr>
+<tr><td>409</td><td><i>O</i><sub>&#x211A;(&radic;(409))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483634 + 106186233sqrt(409)</code></td></tr>
+<tr><td>410</td><td>&#x2124;[&radic;410]</td><td>81 + 4&radic;(410)</td><td>1</td></tr>
+<tr><td>411</td><td>&#x2124;[&radic;411]</td><td>49730 + 2453&radic;(411)</td><td>1</td></tr>
+<tr><td>413</td><td><i>O</i><sub>&#x211A;(&radic;(413))</sub></td><td>61/2 + 3&radic;(413)/2</td><td>1</td></tr>
+<tr><td>415</td><td>&#x2124;[&radic;415]</td><td>18412804 + 903849&radic;(415)</td><td>1</td></tr>
+<tr><td>417</td><td><i>O</i><sub>&#x211A;(&radic;(417))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483641 + 105162727sqrt(417)</code></td></tr>
+<tr><td>418</td><td>&#x2124;[&radic;418]</td><td>33857 + 1656&radic;(418)</td><td>1</td></tr>
+<tr><td>419</td><td>&#x2124;[&radic;419]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483636 + 104911442sqrt(419)</code></td></tr>
+<tr><td>421</td><td><i>O</i><sub>&#x211A;(&radic;(421))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483647 + 104661949sqrt(421)</code></td></tr>
+<tr><td>422</td><td>&#x2124;[&radic;422]</td><td>7022501 + 341850&radic;(422)</td><td>1</td></tr>
+<tr><td>426</td><td>&#x2124;[&radic;426]</td><td>88751 + 4300&radic;(426)</td><td>1</td></tr>
+<tr><td>427</td><td>&#x2124;[&radic;427]</td><td>62 + 3&radic;(427)</td><td>1</td></tr>
+<tr><td>429</td><td><i>O</i><sub>&#x211A;(&radic;(429))</sub></td><td>145/2 + 7&radic;(429)/2</td><td>1</td></tr>
+<tr><td>430</td><td>&#x2124;[&radic;430]</td><td>2862251 + 138030&radic;(430)</td><td>1</td></tr>
+<tr><td>431</td><td>&#x2124;[&radic;431]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483638 + 103440648sqrt(431)</code></td></tr>
+<tr><td>433</td><td><i>O</i><sub>&#x211A;(&radic;(433))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483628 + 103201479sqrt(433)</code></td></tr>
+<tr><td>434</td><td>&#x2124;[&radic;434]</td><td>125 + 6&radic;(434)</td><td>1</td></tr>
+<tr><td>435</td><td>&#x2124;[&radic;435]</td><td>146 + 7&radic;(435)</td><td>1</td></tr>
+<tr><td>437</td><td><i>O</i><sub>&#x211A;(&radic;(437))</sub></td><td>21/2 + &radic;(437)/2</td><td>1</td></tr>
+<tr><td>438</td><td>&#x2124;[&radic;438]</td><td>293 + 14&radic;(438)</td><td>1</td></tr>
+<tr><td>439</td><td>&#x2124;[&radic;439]</td><td>440 + 21&radic;(439)</td><td>1</td></tr>
+<tr><td>442</td><td>&#x2124;[&radic;442]</td><td>21 + &radic;(442)</td><td>&minus;1</td></tr>
+<tr><td>443</td><td>&#x2124;[&radic;443]</td><td>442 + 21&radic;(443)</td><td>1</td></tr>
+<tr><td>445</td><td><i>O</i><sub>&#x211A;(&radic;(445))</sub></td><td>21/2 + &radic;(445)/2</td><td>&minus;1</td></tr>
+<tr><td>446</td><td>&#x2124;[&radic;446]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483645 + 101686298sqrt(446)</code></td></tr>
+<tr><td>447</td><td>&#x2124;[&radic;447]</td><td>148 + 7&radic;(447)</td><td>1</td></tr>
+<tr><td>449</td><td><i>O</i><sub>&#x211A;(&radic;(449))</sub></td><td>189471332 + 8941705&radic;(449)</td><td>&minus;1</td></tr>
+<tr><td>451</td><td>&#x2124;[&radic;451]</td><td>46471490 + 2188257&radic;(451)</td><td>1</td></tr>
+<tr><td>453</td><td><i>O</i><sub>&#x211A;(&radic;(453))</sub></td><td>149/2 + 7&radic;(453)/2</td><td>1</td></tr>
+<tr><td>454</td><td>&#x2124;[&radic;454]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483636 + 100786402sqrt(454)</code></td></tr>
+<tr><td>455</td><td>&#x2124;[&radic;455]</td><td>64 + 3&radic;(455)</td><td>1</td></tr>
+<tr><td>457</td><td><i>O</i><sub>&#x211A;(&radic;(457))</sub></td><td colspan="2"><code>Real part of sum exceeds int data<br />type: 2147483648 + 100455048sqrt(457)</code></td></tr>
+<tr><td>458</td><td>&#x2124;[&radic;458]</td><td>107 + 5&radic;(458)</td><td>&minus;1</td></tr>
+<tr><td>461</td><td><i>O</i><sub>&#x211A;(&radic;(461))</sub></td><td>365/2 + 17&radic;(461)/2</td><td>&minus;1</td></tr>
+<tr><td>462</td><td>&#x2124;[&radic;462]</td><td>43 + 2&radic;(462)</td><td>1</td></tr>
+<tr><td>463</td><td>&#x2124;[&radic;463]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483644 + 99802029sqrt(463)</code></td></tr>
+<tr><td>465</td><td><i>O</i><sub>&#x211A;(&radic;(465))</sub></td><td>15871 + 736&radic;(465)</td><td>1</td></tr>
+<tr><td>466</td><td>&#x2124;[&radic;466]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483647 + 99480259sqrt(466)</code></td></tr>
+<tr><td>467</td><td>&#x2124;[&radic;467]</td><td>1625626 + 75225&radic;(467)</td><td>1</td></tr>
+<tr><td>469</td><td><i>O</i><sub>&#x211A;(&radic;(469))</sub></td><td>65/2 + 3&radic;(469)/2</td><td>1</td></tr>
+<tr><td>470</td><td>&#x2124;[&radic;470]</td><td>1691 + 78&radic;(470)</td><td>1</td></tr>
+<tr><td>471</td><td>&#x2124;[&radic;471]</td><td>7838695 + 361188&radic;(471)</td><td>1</td></tr>
+<tr><td>473</td><td><i>O</i><sub>&#x211A;(&radic;(473))</sub></td><td>87 + 4&radic;(473)</td><td>1</td></tr>
+<tr><td>474</td><td>&#x2124;[&radic;474]</td><td>193549 + 8890&radic;(474)</td><td>1</td></tr>
+<tr><td>478</td><td>&#x2124;[&radic;478]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483643 + 98223616sqrt(478)</code></td></tr>
+<tr><td>479</td><td>&#x2124;[&radic;479]</td><td>2989440 + 136591&radic;(479)</td><td>1</td></tr>
+<tr><td>481</td><td><i>O</i><sub>&#x211A;(&radic;(481))</sub></td><td>964140 + 43961&radic;(481)</td><td>&minus;1</td></tr>
+<tr><td>482</td><td>&#x2124;[&radic;482]</td><td>483 + 22&radic;(482)</td><td>1</td></tr>
+<tr><td>483</td><td>&#x2124;[&radic;483]</td><td>22 + &radic;(483)</td><td>1</td></tr>
+<tr><td>485</td><td><i>O</i><sub>&#x211A;(&radic;(485))</sub></td><td>22 + &radic;(485)</td><td>&minus;1</td></tr>
+<tr><td>487</td><td>&#x2124;[&radic;487]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483645 + 97311773sqrt(487)</code></td></tr>
+<tr><td>489</td><td><i>O</i><sub>&#x211A;(&radic;(489))</sub></td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483635 + 97112568sqrt(489)</code></td></tr>
+<tr><td>491</td><td>&#x2124;[&radic;491]</td><td colspan="2"><code>Overflow occurred considering potential<br />unit -2147483633 + 96914581sqrt(491)</code></td></tr>
+<tr><td>493</td><td><i>O</i><sub>&#x211A;(&radic;(493))</sub></td><td>111/2 + 5&radic;(493)/2</td><td>&minus;1</td></tr>
+<tr><td>494</td><td>&#x2124;[&radic;494]</td><td>73035 + 3286&radic;(494)</td><td>1</td></tr>
+<tr><td>497</td><td><i>O</i><sub>&#x211A;(&radic;(497))</sub></td><td>1201887 + 53912&radic;(497)</td><td>1</td></tr>
+<tr><td>498</td><td>&#x2124;[&radic;498]</td><td>179777 + 8056&radic;(498)</td><td>1</td></tr>
+<tr><td>499</td><td>&#x2124;[&radic;499]</td><td>4490 + 201&radic;(499)</td><td>1</td></tr>
 </table>
-
 
     </body>
 </html>
