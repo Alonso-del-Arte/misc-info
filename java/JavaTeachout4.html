@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Java Teachout, Week 4</title>
+		<link rel="stylesheet" href="https://hakimel.github.io/reveal.js/css/reveal.css" />
+		<link rel="stylesheet" href="https://hakimel.github.io/reveal.js/css/theme/white.css" />
+        <link rel="stylesheet" href="https://hakimel.github.io/reveal.js/lib/css/monokai.css" />
+        <style>
+            td { font-size: 24pt }
+            table.numberTable td, table.byteArray td { text-align: right }
+            table.byteArray td { border-top: 5px solid black; border-bottom: 5px solid black; border-left: 2px solid gray; border-right: 2px solid gray }
+            table.byteArray td.leftColumn { border-left: 5px solid black }
+            table.byteArray td.rightColumn { border-right: 5px solid black }
+            form td, form input, option { font-size: 24pt }
+            p.note { font-size: 18pt }
+        </style>
+        <script>
+            function reCalc() {
+                var qty = parseInt(document.forms['buyWidget']['quantity'].value);
+                var priceAmt = qty * 39.95;
+                document.forms['buyWidget']['price'].value = priceAmt;
+                var tax = priceAmt * parseFloat(document.forms['buyWidget']['salesTax'].value);
+                document.forms['buyWidget']['taxAmt'].value = tax;
+                var totalAmt = priceAmt + tax;
+                document.forms['buyWidget']['total'].value = totalAmt
+            }
+        </script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h2>Disclaimer</h2>
+                    <p>The facts in this presentation are accurate as of today, or as of an earlier date if so indicated. I make no guarantees they'll be accurate tomorrow.</p>
+                    <p>The opinions in this presentation are solely my own, and do not reflect the opinions of Sun Microsystems, Oracle Corp., Altimetrik, MeetUp.com, etc.</p>
+                </section>
+				<section>
+                    <h1>Java Teachout, Week 4</h1>
+                    <h2>by AL</h2>
+                </section>
+                <section>
+                    <h2>Teachout Agenda</h2>
+                    <ul>
+                        <li>Very quick look at floating point weirdness</li>
+                        <li><a href="#arrays">Somewhat in-depth look at arrays</a></li>
+                        <li><a href="#collections">Very quick look at lists, sets, queues</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 id="floatingPoint">Floating Point Weirdness</h1>
+                </section>
+                <section>
+                    <h2>Floating Point Weirdness</h2>
+                    <p>Our classmate noticed this:</p>
+                    <pre><code> &gt; 66.3 / 3.0
+&lt;&middot; 22.099999999999998</code></pre>
+                    <p>This is 0.000000000000002 off from the expected answer.</p>
+                </section>
+                <section>
+                    <h2>Floating Point Weirdness</h2>
+                    <h3>The Classic Example</h3>
+                    <pre><code> &gt; 0.1 + 0.2
+&lt;&middot; 0.30000000000000004</code></pre>
+                </section>
+                <section>
+                    <h2>One-Day Sale on Widgets</h2>
+                    <form name="buyWidget">
+                        <table>
+                            <tr>
+                                <td>Widget Mark I Type 7<br />Quantity: <input type="number" name="quantity" min="0" step="1" value="1" onchange="reCalc()"></td>
+                                <td>US$<input type="number" name="price" value="39.95" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>State Sales Tax
+                                    <select name="salesTax" onchange="reCalc()">
+                                        <option value="0.00" selected>Not Applicable</option>
+                                        <option value="0.04">Alabama 4% Sales Tax</option>
+                                        <option value="0.056">Arizona 5.6% Sales Tax</option>
+                                        <option value="0.065">Arkansas 6.5% Sales Tax</option>
+                                        <option value="0.0725">California 7.25% Sales Tax</option>
+                                        <option value="0.029">Colorado 2.9% Sales Tax</option>
+                                        <option value="0.0635">Connecticut 6.35% Sales Tax</option>
+                                        <option value="0.06">District of Columbia 6% Sales Tax</option>
+                                        <option value="0.06">Florida 6% Sales Tax</option>
+                                        <option value="0.04">Georgia 4% Sales Tax</option>
+                                        <option value="0.04">Hawaii 4% Sales Tax</option>
+                                        <option value="0.06">Idaho 6% Sales Tax</option>
+                                        <option value="0.0625">Illinois 6.25% Sales Tax</option>
+                                        <option value="0.07">Indiana 7% Sales Tax</option>
+                                        <option value="0.06">Iowa 6% Sales Tax</option>
+                                        <option value="0.065">Kansas 6.5% Sales Tax</option>
+                                        <option value="0.06">Kentucky 6% Sales Tax</option>
+                                        <option value="0.0445">Louisiana 4.45% Sales Tax</option>
+                                        <option value="0.055">Maine 5.5% Sales Tax</option>
+                                        <option value="0.06">Maryland 6% Sales Tax</option>
+                                        <option value="0.0625">Massachusetts 6.25% Sales Tax</option>
+                                        <option value="0.06">Michigan 6% Sales Tax</option>
+                                        <option value="0.06875">Minnesota 6.875% Sales Tax</option>
+                                        <option value="0.07">Mississippi 7% Sales Tax</option>
+                                        <option value="0.04225">Missouri 4.225% Sales Tax</option>
+                                        <option value="0.055">Nebraska 5.5% Sales Tax</option>
+                                        <option value="0.0685">Nevada 6.85% Sales Tax</option>
+                                        <option value="0.06625">New Jersey 6.625% Sales Tax</option>
+                                        <option value="0.05125">New Mexico 5.125% Sales Tax</option>
+                                        <option value="0.04">New York 4% Sales Tax</option>
+                                        <option value="0.0475">North Carolina 4.75% Sales Tax</option>
+                                        <option value="0.05">North Dakota 5% Sales Tax</option>
+                                        <option value="0.0575">Ohio 5.75% Sales Tax</option>
+                                        <option value="0.045">Oklahoma 4.5% Sales Tax</option>
+                                        <option value="0.06">Pennsylvania 6% Sales Tax</option>
+                                        <option value="0.115">Puerto Rico 11.5% Sales Tax</option>
+                                        <option value="0.07">Rhode Island 7% Sales Tax</option>
+                                        <option value="0.06">South Carolina 6% Sales Tax</option>
+                                        <option value="0.045">South Dakota 4.5% Sales Tax</option>
+                                        <option value="0.07">Tennessee 7% Sales Tax</option>
+                                        <option value="0.0625">Texas 6.25% Sales Tax</option>
+                                        <option value="0.0175" disabled>Texas 1.75% Sales Tax for Remote Sellers</option>
+                                        <option value="0.0485">Utah 4.85% Sales Tax</option>
+                                        <option value="0.06">Vermont 6% Sales Tax</option>
+                                        <option value="0.043">Virginia 4.3% Sales Tax</option>
+                                        <option value="0.065">Washington 6.5% Sales Tax</option>
+                                        <option value="0.06">West Virgnia 6% Sales Tax</option>
+                                        <option value="0.05">Wisconsin 5% Sales Tax</option>
+                                        <option value="0.04">Wyoming 4% Sales Tax</option>
+                                    </select>
+                                </td>
+                                <td>US$<input type="number" name="taxAmt" step="0.01" value="0.00" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>This item qualifies for FREE SHIPPING</td>
+                                <td>US$<input type="number" name="shipping" value="0.00" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>US$<input type="number" name="total" value="39.95" readonly></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <section>
+                    <h2>Three Common Floating Point Problems</h2>
+                    <ul>
+                        <li>Finite rational approximation</li>
+                        <li>Conflicting scales</li>
+                        <li>Error accumulation</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>Finite Rational Approximation</h2>
+                        <table>
+                            <tr><td><sup>1</sup>&frasl;<sub>3</sub> = </td><td><sup>3</sup>&frasl;<sub>10</sub> ...</td><td>0.3</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>100</sub> ...</td><td>0.33</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>1000</sub> ...</td><td>0.333</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>10000</sub> ...</td><td>0.3333</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>100000</sub> ...</td><td>0.33333</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>1000000</sub> ...</td><td>0.333333</td></tr>
+                            <tr><td></td><td> + <sup>3</sup>&frasl;<sub>10000000</sub> ...</td><td>0.3333333</td></tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Finite Rational Approximation</h2>
+                        <table>
+                            <tr><td><sup>1</sup>&frasl;<sub>3</sub> = </td><td><sup>1</sup>&frasl;<sub>4</sub> ...</td><td>0.25</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>16</sub> ...</td><td>0.3125</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>64</sub> ...</td><td>0.328125</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>256</sub> ...</td><td>0.33203125</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>1024</sub> ...</td><td>0.3330078125</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>4096</sub> ...</td><td>0.333251953125</td></tr>
+                            <tr><td></td><td> + <sup>1</sup>&frasl;<sub>16384</sub> ...</td><td>0.33331298828125</td></tr>
+                        </table>
+                    </section>
+                </section>
+                <section>
+                    <h2>Conflicting Scales</h2>
+                    <p>Floating point can represent numbers...</p>
+                    <ul>
+                        <li>...as large as 1.8 &times; 10<sup>308</sup> (the visible universe is believed to contain just 10<sup>80</sup> atoms)</li>
+                        <li>...as tiny as 2.2 &times; 10<sup>&minus;308</sup> (tinier than the diameter of an electron in inches)</li>
+                    </ul>
+                    <p>But what about a number like</p>
+                    <ul>
+                        <li>1.8 &times; 10<sup>308</sup> + 2.2 &times; 10<sup>&minus;308</sup> ?</li>
+                    </ul>
+                    <p>The smaller number vanishes to 0.</p>
+                </section>
+                <section>
+                <section>
+                    <h2>Error Accumulation</h2>
+                    <p>A single floating point operation may have an acceptable degree of error, but several floating point operations building upon each other might accumulate errors to an unacceptable degree.</p>
+                </section>
+                <section>
+                    <h2>Error Accumulation</h2>
+                    <pre><code> &gt; 0.3 * 10000
+&lt;&middot; 3000.0</code></pre>
+                    <p>...but set <code>num = 0</code> and repeat <code>num = num + (0.1 + 0.2)</code> ten thousand times:</p>
+                    <pre><code>&lt;&middot; 3000.0000000003583</code></pre>
+                    <p>The extra 0.0000000003583 is the accumulated error of repeatedly adding 0.1 and 0.2.</p>
+                </section>
+                </section>
+                <section>
+                    <h2>Floating Point Weirdness</h2>
+                    <h3>Takeaways</h3>
+                    <ul>
+                        <li>Floating point is unsuitable for money arithmetic.</li>
+                        <li>Avoid repeated addition or subtraction, prefer multiplication whenever possible.</li>
+                        <li>Accept that floating point arithmetic is not always precise, consider if it is or isn't good enough for your purpose.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 id="arrays">Array Basics</h1>
+                </section>
+                <section>
+                    <h2>Array Basics</h2>
+                    <p>An array is a group of elements of a specified type. An array is of fixed size.</p>
+                </section>
+                <section>
+                    <h2>Advantages of Arrays</h2>
+                    <ul>
+                        <li>Easy to declare</li>
+                        <li>Easy to initialize</li>
+                        <li>Fast access to elements</li>
+                        <li>Backwards compatibility to JDK 1.0</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Disadvantages of Arrays</h2>
+                    <ul>
+                        <li>Can't grow array in place</li>
+                        <li>Inserting at the beginning requires copying and moving all of the existing elements you want to keep</li>
+                        <li>Inserting in the middle requires copying and moving the existing elements and the desired position and all later elements</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Array Declaration Syntax</h2>
+                    <p>Here's one way to declare an array:</p>
+                    <p><i>type</i><code>[]</code> <i>identifier</i> <code> = new</code> <i>type</i><code>[</code><i>positive integer</i><code>];</code></p>
+                    <p>For example:</p>
+                    <pre><code>int[] someNumbers = new int[3];</code></pre>
+                    <p class="note">There is also a slightly different syntax inherited from C/C++.</p>
+                </section>
+                <section>
+                    <h2>Array Declaration and Initialization Syntax</h2>
+                    <p>If the array's to have just a few elements, you can use an "array literal"</p>
+                    <p><i>type</i><code>[]</code> <i>identifier</i> <code> = {</code> <i>literals or variables separated by commas</i> <code>};</code></p>
+                    <p>For example:</p>
+                    <pre><code>int[] someNumbers = {1, 2, 3, 4, 7};</code></pre>
+                </section>
+                <section>
+                    <section>
+                        <h2>Illustration of Memory</h2>
+                        <pre><code>int[] someNumbers = new int[3];</code></pre>
+                        <p>The <abbr title="Java Virtual Machine">JVM</abbr> allocates twelve bytes (four bytes for each of the three <code>int</code>s).</p>
+                        <table class="byteArray">
+                            <tr><td class="leftColumn">&minus;17</td><td>125</td><td>&minus;11</td><td class="rightColumn">&minus;8</td></tr>
+                            <tr><td class="leftColumn">3</td><td>0</td><td>127</td><td class="rightColumn">&minus;103</td></tr>
+                            <tr><td class="leftColumn">&minus;1</td><td>&minus;1</td><td>&minus;52</td><td class="rightColumn">112</td></tr>
+                        </table>
+                        <p class="note">It actually allocates somewhat more than that.</p>
+                    </section>
+                    <section>
+                        <h2>Illustration of Memory</h2>
+                        <pre><code>int[] someNumbers = new int[3];</code></pre>
+                        <p>The <abbr title="Java Virtual Machine">JVM</abbr> allocates twelve bytes (four bytes for each of the three <code>int</code>s) and also zeroes them out.</p>
+                        <table class="byteArray">
+                            <tr><td class="leftColumn">&nbsp;&nbsp;&nbsp;0</td><td>&nbsp;&nbsp;&nbsp;0</td><td>&nbsp;&nbsp;&nbsp;0</td><td class="rightColumn">&nbsp;&nbsp;&nbsp;0</td></tr>
+                            <tr><td class="leftColumn">0</td><td>0</td><td>0</td><td class="rightColumn">0</td></tr>
+                            <tr><td class="leftColumn">0</td><td>0</td><td>0</td><td class="rightColumn">0</td></tr>
+                        </table>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Java Array Initialization</h2>
+                        <p>If not immediately declared with specific initial values, the elements of an array will be initialized to zero, <code>false</code> or <code>null</code>, as applicable.</p>
+                        <pre><code>    public static void main(String[] args) {
+        int[] myIntArray = new int[3];
+        System.out.println(myIntArray[0]);
+        System.out.println(myIntArray[1]);
+        System.out.println(myIntArray[2]);
+        myIntArray[0] = 3;
+        myIntArray[1] = 4;
+        myIntArray[2] = 6;
+        System.out.println(myIntArray[0]);
+        System.out.println(myIntArray[1]);
+        System.out.println(myIntArray[2]);
+    }</code></pre>
+                    </section>
+                    <section>
+                        <p>This should print out three zeroes before the array elements are expressly assigned, and the numbers 3, 4, 6 afterwards, regardless of which system with the Java Runtime Environment we run this on.</p>
+                        <pre><code data-trim>0
+0
+0
+3
+4
+6
+Process finished with exit code 0</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>C++ Array Initialization</h2>
+                        <p>Don't take it for granted in other programming languages, like C++.</p>
+                        <pre><code data-trim>#include &lt;iostream&gt;
+
+int main(int argc, const char * argv[]) {
+    int someNumbers[3];
+    std::cout &lt;&lt; someNumbers[0] &lt;&lt; std::endl;
+    std::cout &lt;&lt; someNumbers[1] &lt;&lt; std::endl;
+    std::cout &lt;&lt; someNumbers[2] &lt;&lt; std::endl;
+    someNumbers[0] = 3;
+    someNumbers[1] = 4;
+    someNumbers[2] = 6;
+    std::cout &lt;&lt; someNumbers[0] &lt;&lt; std::endl;
+    // etc.
+    return 0;
+}</code></pre>
+                    </section>
+                    <section>
+                        <p>Results will depend on the specific system.</p>
+                        <table class="numberTable">
+                            <tr><td> </td><td>System A</td><td>System B</td></tr>
+                            <tr><td><code>someNumbers[0]</code></td><td>0</td><td>0</td></tr>
+                            <tr><td><code>someNumbers[1]</code></td><td>0</td><td>&minus;272632328</td></tr>
+                            <tr><td><code>someNumbers[2]</code></td><td>&minus;13200</td><td>32766</td></tr>
+                            <tr><td colspan="3" style="text-align: center">Then the assignments take place...</td></tr>
+                            <tr><td><code>someNumbers[0]</code></td><td>3</td><td>3</td></tr>
+                            <tr><td><code>someNumbers[1]</code></td><td>4</td><td>4</td></tr>
+                            <tr><td><code>someNumbers[2]</code></td><td>6</td><td>6</td></tr>
+                        </table>
+                        <p class="note">System A is an old Gateway running Windows 8.2, NetBeans 8.2, with Cygwin-Windows, GNU C++ compiler. System B is a MacBook Air running macOS Catalina (10.15.1), XCode 10.2.1, also with the GNU C++ Compiler.</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Java Array Bounds Enforcement</h2>
+                        <pre><code>int[] someNumbers = new int[3];
+System.out.println(someNumbers[-10]);
+System.out.println(someNumbers[100]);</code></pre>
+                        <ul>
+                            <li>Trying to access <code>someNumbers[-10]</code> should cause an exception and halt program execution.</li>
+                            <li>Trying to access <code>someNumbers[100]</code> <em>would</em> also cause an exception, except the previous line prevents this line from executing in the first place.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Java Array Bounds Enforcement</h2>
+                        <pre><code>int[] someNumbers = new int[3];
+System.out.println(someNumbers[-10]);</code></pre>
+                        <p>causes</p>
+                        <pre><code>Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -10
+	at basicexercises.ArrayBoundsExercise.main(ArrayBoundsExercise.java:25)
+/Users/dev/Library/Caches/NetBeans/11.1/executor-snippets/run.xml:111: The following error occurred while executing this line:
+/Users/dev/Library/Caches/NetBeans/11.1/executor-snippets/run.xml:94: Java returned: 1
+BUILD FAILED (total time: 0 seconds)</code></pre>
+                    </section>
+                    <section>
+                        <h2>Java Array Bounds Enforcement</h2>
+                        <p>Perry asked about this.</p>
+                        <h3>Disadvantages</h3>
+                        <ul>
+                            <li>Slight performance penalty (might be humanly noticeable in an old JVM running on an old operating system)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Java Array Bounds Enforcement</h2>
+                        <h3>Advantages</h3>
+                        <ul>
+                            <li>Better to crash predictably than continue un&shy;pre&shy;dict&shy;ably</li>
+                            <li>Easier to catch mistakes pertaining to bad array indices</li>
+                            <li>Can't unintentionally nor maliciously use array to alter running program or data, or obtain in&shy;for&shy;ma&shy;tion from other running programs</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>No Array Bounds Enforcement in C++</h2>
+                        <pre><code>    int someNumbers[3];
+    std::cout &lt;&lt; someNumbers[-10] &lt;&lt; std::endl;
+    std::cout &lt;&lt; someNumbers[100] &lt;&lt; std::endl;</code></pre>
+                        <table class="numberTable">
+                            <tr><td> </td><td>System A</td><td>System B</td></tr>
+                            <tr><td><code>someNumbers[-10]</code></td><td>4198857</td><td>32767</td></tr>
+                            <tr><td><code>someNumbers[100]</code></td><td>0</td><td>1986622053</td></tr>
+                        </table>
+                        <p class="note">However, XCode will give you a gentle reminder about the array bounds. NetBeans won't.</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>It's a rabbit hole...</p>
+                        <pre><code> &gt; var someNumbers = [3, 4, 6]
+ &gt; someNumbers[2]
+&lt;&middot; 6</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>You can assign elements to a JavaScript array beyond the last one.</p>
+                        <pre><code> &gt; var someNumbers = [3, 4, 6]
+ &gt; someNumbers[2]
+&lt;&middot; 6
+ &gt; someNumbers[3]
+&lt;&middot; undefined
+ &gt; someNumbers[4] = 28
+&lt;&middot; 28
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>Adding elements at a positive integer index beyond the last one increases the length of the array even without assigning the intervening elements.</p>
+                        <pre><code> &gt; var someNumbers = [3, 4, 6]
+ &gt; someNumbers[2]
+&lt;&middot; 6
+ &gt; someNumbers[1000] = 439
+&lt;&middot; 439
+ &gt; someNumbers.length
+&lt;&middot; 1001</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>But you can use absolutely anything in JavaScript as an index for a JavaScript array.</p>
+                        <pre><code> &gt; someNumbers[-10] = 5040
+ &gt; someNumbers[5.48] = 22
+ &gt; someNumbers[true] = 1
+ &gt; someNumbers[NaN] = -58
+ &gt; someNumbers["Woodward"] = 1
+ &gt; someNumbers[window] = 43
+ &gt; someNumbers[document] = 59</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>You can have those elements read back to you...</p>
+                        <pre><code> &gt; someNumbers[-10]
+&lt;&middot; 5040
+ &gt; someNumbers[5.48]
+&lt;&middot; 22
+ &gt; someNumbers[true]
+&lt;&middot; 1
+ &gt; someNumbers[NaN]
+&lt;&middot; -58
+ &gt; someNumbers["Woodward"]
+&lt;&middot; 1
+ &gt; someNumbers["[object Window]"]
+&lt;&middot; 43
+ &gt; someNumbers["[object HTMLDocument]"]
+&lt;&middot; 59</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>...but they don't affect the length of the array.</p>
+                        <pre><code> &gt; someNumbers.length
+&lt;&middot; 1001</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>Unlike Java arrays, JavaScript arrays are not of a specific type, and so they can hold elements of any type.</p>
+                        <pre><code> &gt; someNumbers[200] = "John Q. Public"
+ &gt; function f(n) { return n * n + n }
+ &gt; someNumbers[201] = f</code></pre>
+                    </section>
+                    <section>
+                        <h2>JavaScript Array Index Weirdness</h2>
+                        <p>And yeah, you can use a JavaScript function as an index for an array...</p>
+                        <pre><code> &gt; someNumbers[f] = 298</code></pre>
+                        <p>There's even more JavaScript array weirdness, but this is probably more than enough for now.</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Java Array Index Requirements</h2>
+                        <ul>
+                            <li>Only literals and variables of type <code>byte</code>, <code>short</code> or <code>int</code> can be used as array indices, even if numbers of other primitive types can be converted without loss of precision.</li>
+                            <li>Negative indices and positive indices beyond the last index will cause <code>Ar&shy;ray&shy;In&shy;dex&shy;Out&shy;Of&shy;Bounds&shy;Ex&shy;cep&shy;tion</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Only literals and variables of type <code>byte</code>, <code>short</code> or <code>int</code> can be used as array indices, even if numbers of other primitive types can be converted without loss of precision.</li>
+                        </ul>
+                        <pre><code>        char[] cardSuits = {'&spades;', '&hearts;', '&clubs;', '&diams;'};
+        long badIndexA = 0L;
+        cardSuits[badIndexA] = 's'; // ERROR !!!
+        float badIndexB = 1.0f;
+        cardSuits[badIndexB] = 'h'; // ERROR !!!
+        double badIndexC = 2.0;
+        cardSuits[badIndexC] = 'c'; // ERROR !!!</code></pre>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Negative indices and positive indices beyond the last index will cause <code>Ar&shy;ray&shy;In&shy;dex&shy;Out&shy;Of&shy;Bounds&shy;Ex&shy;cep&shy;tion</code></li>
+                        </ul>
+                        <p>This point has already been abundantly illustrated.</p>
+                    </section>
+                </section>
+                <section>
+                    <h2>Pop Quiz</h2>
+                    <pre><code>    public static void main(String[] args) {
+        int[] someNumbers = new int[3];
+        double[] moreNumbers = {1.25, Math.sqrt(2), 3.8, 
+                                Math.random(), 1e85};
+    }</code></pre>
+                    <p>(click for answers) What is the length of...</p>
+                    <ul>
+                        <li onclick="this.innerHTML = this.innerHTML + ' 3';">... <code>someNumbers</code>?</li>
+                        <li onclick="this.innerHTML = this.innerHTML + ' 5';">... <code>moreNumbers</code>?</li>
+                        <li onclick="this.innerHTML = this.innerHTML + ' Most likely 0, but can\'t say for sure';">... <code>args</code>?</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>Length Property of an Array</h2>
+                        <p>Arrays have a <code>length</code> property that can be accessed to find out how many elements the array has.</p>
+                        <pre><code>       int[] someNumbers = new int[3];
+       System.out.println(someNumbers.length); // 3
+       double[] moreNumbers = {1.25, Math.sqrt(2), 3.8, 
+                               Math.random(), 1e85};
+       System.out.println(moreNumbers.length); // 5
+       System.out.println(args.length); // Probably 0</code></pre>
+                    </section>
+                    <section>
+                        <h2>Number of Command Line Arguments</h2>
+                        <p>The <code>args</code> array passed to <code>public static void main()</code> contains the command line arguments (if any) that were passed in from the command line.</p>
+                        <p><code>args.length</code> will be 0 if there were no command line arguments, a positive integer if there was at least one command line argument.</p>
+                    </section>
+                    <section>
+                        <h2>Number of Command Line Arguments</h2>
+                        <pre><code>package basicexercises;
+
+public class CommandLineArgsCounter {
+    
+    public static void main(String[] args) {
+        System.out.println("You entered " + args.length + 
+                           " command line argument(s).");
+    }
+    
+}</code></pre>
+                    </section>
+                    <section>
+                        <h2>Running a Program From the Command Line</h2>
+                        <p>Exact file path will depend on your IDE, unless you move the pertinent bytecode files.</p>
+                        <pre><code>dev@lil-scamperooni 
+&gt; ~/NetBeansProjects/BasicExercises/build
+&gt; java -cp classes basicexercises.CommandLineArgsCounter 
+  arg1 arg2 arg3 arg4 arg5
+You entered 5 command line argument(s)
+</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <h1 id="collections">Collections</h1>
+                </section>
+                <section>
+                    <h2>Quick Look at Three Types of Collections</h2>
+                    <ul>
+                        <li>Lists</li>
+                        <li>Sets</li>
+                        <li>Queues</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>List Properties</h2>
+                        <ul>
+                            <li>A list has a particular order</li>
+                            <li>A list can grow as needed</li>
+                            <li>A list can have duplicate elements</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>List Operations</h2>
+                        <ul>
+                            <li>Create an empty list, or create a list from an array or from another collection</li>
+                            <li>Add an element (optional: specify position)</li>
+                            <li>Retrieve the element at an arbitrary position</li>
+                            <li>Remove an element</li>
+                            <li>Reorder the list</li>
+                            <li>Query size of the list</li>
+                            <li>Copy the list to an array or to another collection</li>
+                            <li>Clear out the list</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Examples of Lists</h2>
+                        <ul>
+                            <li>A list of integers: 1, 1, 2, 1, 3, 1, 2, 4, 1, 5, 1, 2, 3, 6, 1, 7, 1, 2, 4, 8, 1, 3, 9, 1, 2, 5, 10, 1, 11, 1, 2, 3, 4, 6, 12, 1, 13, 1, 2, 7, 14, 1, 3, 5, 15, 1, 2, 4, 8, 16, 1, 17, 1, 2, 3, 6, 9, 18, 1, 19, 1, 2, 4, 5, 10, 20, 1, 3, 7, 21, 1, 2, 11, 22, 1, 23, 1, 2, 3, 4, 6, 8, 12, 24, 1, 5, 25, 1, 2, 13, 26, 1, 3, 9, 27, 1, 2, 4, 7, 14, 28</li>
+                            <li>A list of <code>String</code>s: "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Rudolph"</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Set Properties</h2>
+                        <ul>
+                            <li>A set has no particular order</li>
+                            <li>A set can grow as needed</li>
+                            <li>A set can't have duplicate elements</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Set Operations</h2>
+                        <ul>
+                            <li>Create an empty set, or create a set from an array or from another collection</li>
+                            <li>Add an element</li>
+                            <li>Retrieve the element pointed to by an iterator</li>
+                            <li>Remove an element</li>
+                            <li>Query size of the set</li>
+                            <li>Get the union, intersection or complement of the set with another set</li>
+                            <li>Copy the set to an array or to another collection</li>
+                            <li>Clear out the set</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Set Operations</h2>
+                        <p><b>NOTE:</b> You can try to add to a set an element that the set already contains. This should not cause any exception, but there should be some indication that the duplicate add was rejected.</p>
+                    </section>
+                    <section>
+                        <h2>Examples of Sets</h2>
+                        <ul>
+                            <li>A set of integers: 0, 1, 4, 9, 3, 12, 10. This may or may not be the order in which the integers are stored internally.</li>
+                            <li>A set of playing cards in a poker hand: 7&spades;, 8&spades;, 9&spades;, 10&spades;, <span style="color: red">Q&hearts;</span>. If the cards were shuffled properly, the player probably got them in a different order. And if there are any duplicate cards, it probably means someone's cheating.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Queue Properties</h2>
+                        <ul>
+                            <li>A queue has a particular order</li>
+                            <li>A queue can grow as needed</li>
+                            <li>Elements can be added at the beginning or at the end, but not in the middle</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Queue Operations</h2>
+                        <ul>
+                            <li>Create an empty queue</li>
+                            <li>Create a queue from an array or from another collection</li>
+                            <li>Add an element to the queue</li>
+                            <li>Remove an element</li>
+                            <li>Query size of the queue</li>
+                            <li>Copy the queue to an array</li>
+                            <li>Copy the queue to another collection</li>
+                            <li>Clear out the queue</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example of a Queue</h2>
+                        <h3>Heart Transplant Queue</h3>
+                        <ul>
+                            <li>Lois Williams, O-</li>
+                            <li>Dick Cheney, AB+</li>
+                            <li>Donald Markerson, B+</li>
+                            <li>Kelly Miller, AB-</li>
+                            <li>Harald Thiejs, A+</li>
+                            <li>etc.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example of a Queue</h2>
+                        <h3>Heart Transplant Queue</h3>
+                        <p>The hospital receives an AB+ heart. Lois Williams is at the top of the queue, but she needs O-, so Dick Cheney gets it instead and comes off the queue.</p>
+                        <ul>
+                            <li>Lois Williams, O-</li>
+                            <li>Donald Markerson, B+</li>
+                            <li>Kelly Miller, AB-</li>
+                            <li>Harald Thiejs, A+</li>
+                            <li>etc.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>References</h2>
+                    <ul>
+                        <li>David Flater and William F Guthrie, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4487316/" target="_blank">"A Case Study of Performance Degradation Attributable to Run-Time Bounds Checks on C++ Vector Access"</a>, <i>J Res Natl Inst Stand Technol.</i> 2013; 118: 260–279.</li>
+                        <li>Oracle Corp., The Java&trade; Tutorials, <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" target="_blank">Arrays</a></li>
+                        <li>Oracle Corp., <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ArrayIndexOutOfBoundsException.html" target="_blank"><code>Ar&shy;ray&shy;In&shy;dex&shy;Out&shy;Of&shy;Bounds&shy;Ex&shy;cep&shy;tion</code> Javadoc</a></li>
+                    </ul>
+                </section>
+			</div>
+		</div>
+		<script src="https://hakimel.github.io/reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+	// More info https://github.com/hakimel/reveal.js#dependencies
+	dependencies: [
+		{ src: 'https://hakimel.github.io/reveal.js/plugin/highlight/highlight.js', async: true },
+	]
+});
+		</script>
+	</body>
+</html>
