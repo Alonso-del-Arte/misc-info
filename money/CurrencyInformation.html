@@ -1,15 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Currency Information</title>
         <meta charset="utf-8" />
+        <title>Currency Information</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="DESCRIPTION GOES HERE" />
-        <meta name="author" content="AUTHOR NAME GOES HERE" />
+        <meta name="description" content="Basic information about currencies of the world, including precious metals and units of account." />
+        <meta name="author" content="Gleaned from Java Runtime Environment currency data" />
+        <style type="text/css"><!--
+            tr:nth-child(even) { background: #ccffcc }
+            td { padding: 0.5em }
+            td.number { text-align: right }
+        // --></style>
     </head>
     <body>
         <h1>Currency Information</h1>
-        <p>Placeholder. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text.</p>
+        <p>The following table contains basic information about currencies of the world, including precious metals and units of account. The information was gleaned from Java Runtime Environment currency data file through a simple Java program I wrote.</p>
+        <table>
+            <tr><th colspan="2">ISO-4217</th><th>Name in locale en_US</th><th>Names in other locales</th><th>Symbol</th><th>.Digits*</th></tr>
+            <tr><td class="number">230</td><td>ETB</td><td>Ethiopian Birr</td><td></td><td>ETB</td><td class="number">2</td></tr>
+            <tr><td class="number">188</td><td>CRC</td><td>Costa Rican Colón</td><td>colón costarricense</td><td>C</td><td class="number">2</td></tr>
+            <tr><td class="number">132</td><td>CVE</td><td>Cape Verdean Escudo</td><td></td><td>CVE</td><td class="number">2</td></tr>
+            <tr><td class="number">934</td><td>TMT</td><td>Turkmenistani Manat</td><td></td><td>TMT</td><td class="number">2</td></tr>
+            <tr><td class="number">20</td><td>ADP</td><td>Andorran Peseta</td><td></td><td>ADP</td><td class="number">0</td></tr>
+            <tr><td class="number">292</td><td>GIP</td><td>Gibraltar Pound</td><td></td><td>GIP</td><td class="number">2</td></tr>
+            <tr><td class="number">990</td><td>CLF</td><td>Chilean Unit of Account (UF)</td><td></td><td>CLF</td><td class="number">4</td></tr>
+            <tr><td class="number">975</td><td>BGN</td><td>Bulgarian Lev</td><td></td><td>лв.</td><td class="number">2</td></tr>
+            <tr><td class="number">932</td><td>ZWL</td><td>Zimbabwean Dollar (2009)</td><td></td><td>ZWL</td><td class="number">2</td></tr>
+            <tr><td class="number">344</td><td>HKD</td><td>Hong Kong Dollar</td><td>港元</td><td>HK$</td><td class="number">2</td></tr>
+            <tr><td class="number">214</td><td>DOP</td><td>Dominican Peso</td><td>peso dominicano</td><td>RD$</td><td class="number">2</td></tr>
+            <tr><td class="number">634</td><td>QAR</td><td>Qatari Rial</td><td></td><td>ر.ق.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">68</td><td>BOB</td><td>Bolivian Boliviano</td><td>boliviano</td><td>B$</td><td class="number">2</td></tr>
+            <tr><td class="number">862</td><td>VEB</td><td>Venezuelan Bolívar (1871-2008)</td><td></td><td>VEB</td><td class="number">2</td></tr>
+            <tr><td class="number">191</td><td>HRK</td><td>Kuna</td><td></td><td>Kn</td><td class="number">2</td></tr>
+            <tr><td class="number">764</td><td>THB</td><td>Thai Baht</td><td></td><td>฿</td><td class="number">2</td></tr>
+            <tr><td class="number">458</td><td>MYR</td><td>Malaysian Ringgit</td><td></td><td>RM</td><td class="number">2</td></tr>
+            <tr><td class="number">558</td><td>NIO</td><td>Nicaraguan Córdoba</td><td>córdoba oro nicaragüense</td><td>$C</td><td class="number">2</td></tr>
+            <tr><td class="number">736</td><td>SDD</td><td>Sudanese Dinar (1992-2007)</td><td></td><td>SDD</td><td class="number">2</td></tr>
+            <tr><td class="number">96</td><td>BND</td><td>Brunei Dollar</td><td></td><td>BND</td><td class="number">2</td></tr>
+            <tr><td class="number">980</td><td>UAH</td><td>Ukrainian Hryvnia</td><td></td><td>грн.</td><td class="number">2</td></tr>
+            <tr><td class="number">152</td><td>CLP</td><td>Chilean Peso</td><td>peso chileno</td><td>Ch$</td><td class="number">0</td></tr>
+            <tr><td class="number">891</td><td>CSD</td><td>Serbian Dinar (2002-2006)</td><td></td><td>CSD</td><td class="number">2</td></tr>
+            <tr><td class="number">748</td><td>SZL</td><td>Swazi Lilangeni</td><td></td><td>SZL</td><td class="number">2</td></tr>
+            <tr><td class="number">826</td><td>GBP</td><td>British Pound Sterling</td><td></td><td>£</td><td class="number">2</td></tr>
+            <tr><td class="number">600</td><td>PYG</td><td>Paraguayan Guarani</td><td>guaraní paraguayo</td><td>G</td><td class="number">0</td></tr>
+            <tr><td class="number">860</td><td>UZS</td><td>Uzbekistan Som</td><td></td><td>UZS</td><td class="number">2</td></tr>
+            <tr><td class="number">967</td><td>ZMW</td><td>ZMW</td><td></td><td>ZMW</td><td class="number">2</td></tr>
+            <tr><td class="number">840</td><td>USD</td><td>US Dollar</td><td>dólar estadounidense</td><td>US$</td><td class="number">2</td></tr>
+            <tr><td class="number">620</td><td>PTE</td><td>Portuguese Escudo</td><td></td><td>PTE</td><td class="number">0</td></tr>
+            <tr><td class="number">356</td><td>INR</td><td>Indian Rupee</td><td></td><td>Rs.</td><td class="number">2</td></tr>
+            <tr><td class="number">646</td><td>RWF</td><td>Rwandan Franc</td><td></td><td>RWF</td><td class="number">0</td></tr>
+            <tr><td class="number">947</td><td>CHE</td><td>CHE</td><td></td><td>CHE</td><td class="number">2</td></tr>
+            <tr><td class="number">955</td><td>XBA</td><td>European Composite Unit</td><td></td><td>XBA</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">270</td><td>GMD</td><td>Gambian Dalasi</td><td></td><td>GMD</td><td class="number">2</td></tr>
+            <tr><td class="number">418</td><td>LAK</td><td>Lao Kip</td><td></td><td>LAK</td><td class="number">2</td></tr>
+            <tr><td class="number">276</td><td>DEM</td><td>German Mark</td><td></td><td>DEM</td><td class="number">2</td></tr>
+            <tr><td class="number">430</td><td>LRD</td><td>Liberian Dollar</td><td></td><td>LRD</td><td class="number">2</td></tr>
+            <tr><td class="number">936</td><td>GHS</td><td>Ghanaian Cedi</td><td></td><td>GHS</td><td class="number">2</td></tr>
+            <tr><td class="number">960</td><td>XDR</td><td>Special Drawing Rights</td><td></td><td>XDR</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">192</td><td>CUP</td><td>Cuban Peso</td><td>peso cubano</td><td>CU$</td><td class="number">2</td></tr>
+            <tr><td class="number">937</td><td>VEF</td><td>Venezuelan Bolívar</td><td></td><td>VEF</td><td class="number">2</td></tr>
+            <tr><td class="number">136</td><td>KYD</td><td>Cayman Islands Dollar</td><td></td><td>KYD</td><td class="number">2</td></tr>
+            <tr><td class="number">941</td><td>RSD</td><td>Serbian Dinar</td><td>Srpski dinar</td><td>din.</td><td class="number">2</td></tr>
+            <tr><td class="number">300</td><td>GRD</td><td>Greek Drachma</td><td></td><td>GRD</td><td class="number">0</td></tr>
+            <tr><td class="number">446</td><td>MOP</td><td>Macanese Pataca</td><td></td><td>MOP</td><td class="number">2</td></tr>
+            <tr><td class="number">702</td><td>SGD</td><td>Singapore Dollar</td><td>新加坡元</td><td>S$</td><td class="number">2</td></tr>
+            <tr><td class="number">90</td><td>SBD</td><td>Solomon Islands Dollar</td><td></td><td>SBD</td><td class="number">2</td></tr>
+            <tr><td class="number">973</td><td>AOA</td><td>Angolan Kwanza</td><td></td><td>AOA</td><td class="number">2</td></tr>
+            <tr><td class="number">951</td><td>XCD</td><td>East Caribbean Dollar</td><td></td><td>XCD</td><td class="number">2</td></tr>
+            <tr><td class="number">962</td><td>XPT</td><td>Platinum</td><td></td><td>XPT</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">498</td><td>MDL</td><td>Moldovan Leu</td><td></td><td>MDL</td><td class="number">2</td></tr>
+            <tr><td class="number">968</td><td>SRD</td><td>Surinamese Dollar</td><td></td><td>SRD</td><td class="number">2</td></tr>
+            <tr><td class="number">682</td><td>SAR</td><td>Saudi Riyal</td><td></td><td>ر.س.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">894</td><td>ZMK</td><td>Zambian Kwacha</td><td></td><td>ZMK</td><td class="number">2</td></tr>
+            <tr><td class="number">368</td><td>IQD</td><td>Iraqi Dinar</td><td></td><td>د.ع.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">174</td><td>KMF</td><td>Comorian Franc</td><td></td><td>KMF</td><td class="number">0</td></tr>
+            <tr><td class="number">392</td><td>JPY</td><td>Japanese Yen</td><td>日本円</td><td>￥</td><td class="number">0</td></tr>
+            <tr><td class="number">478</td><td>MRO</td><td>Mauritanian Ouguiya</td><td></td><td>MRO</td><td class="number">2</td></tr>
+            <tr><td class="number">324</td><td>GNF</td><td>Guinean Franc</td><td></td><td>GNF</td><td class="number">0</td></tr>
+            <tr><td class="number">548</td><td>VUV</td><td>Vanuatu Vatu</td><td></td><td>VUV</td><td class="number">0</td></tr>
+            <tr><td class="number">928</td><td>VES</td><td>Venezuelan Bolívar Soberano</td><td></td><td>Bs.S.</td><td class="number">2</td></tr>
+            <tr><td class="number">704</td><td>VND</td><td>Vietnamese Dong</td><td></td><td>đ</td><td class="number">0</td></tr>
+            <tr><td class="number">434</td><td>LYD</td><td>Libyan Dinar</td><td></td><td>د.ل.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">978</td><td>EUR</td><td>Euro</td><td>euro, Evro</td><td>€</td><td class="number">2</td></tr>
+            <tr><td class="number">288</td><td>GHC</td><td>Ghanaian Cedi (1979-2007)</td><td></td><td>GHC</td><td class="number">2</td></tr>
+            <tr><td class="number">512</td><td>OMR</td><td>Omani Rial</td><td></td><td>ر.ع.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">784</td><td>AED</td><td>United Arab Emirates Dirham</td><td></td><td>د.إ.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">969</td><td>MGA</td><td>Malagasy Ariary</td><td></td><td>MGA</td><td class="number">2</td></tr>
+            <tr><td class="number">716</td><td>ZWD</td><td>Zimbabwean Dollar (1980-2008)</td><td></td><td>ZWD</td><td class="number">2</td></tr>
+            <tr><td class="number">946</td><td>RON</td><td>Romanian Leu</td><td></td><td>LEI</td><td class="number">2</td></tr>
+            <tr><td class="number">352</td><td>ISK</td><td>Icelandic Króna</td><td></td><td>kr.</td><td class="number">0</td></tr>
+            <tr><td class="number">818</td><td>EGP</td><td>Egyptian Pound</td><td></td><td>ج.م.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">504</td><td>MAD</td><td>Moroccan Dirham</td><td></td><td>د.م.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">454</td><td>MWK</td><td>Malawian Malawi Kwacha</td><td></td><td>MWK</td><td class="number">2</td></tr>
+            <tr><td class="number">882</td><td>WST</td><td>Samoan Tala</td><td></td><td>WST</td><td class="number">2</td></tr>
+            <tr><td class="number">690</td><td>SCR</td><td>Seychellois Rupee</td><td></td><td>SCR</td><td class="number">2</td></tr>
+            <tr><td class="number">408</td><td>KPW</td><td>North Korean Won</td><td></td><td>KPW</td><td class="number">2</td></tr>
+            <tr><td class="number">935</td><td>ZWR</td><td>Zimbabwean Dollar (2008)</td><td></td><td>ZWR</td><td class="number">2</td></tr>
+            <tr><td class="number">891</td><td>YUM</td><td>Yugoslavian New Dinar (1994-2002)</td><td></td><td>YUM</td><td class="number">2</td></tr>
+            <tr><td class="number">422</td><td>LBP</td><td>Lebanese Pound</td><td></td><td>ل.ل.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">999</td><td>XXX</td><td>Unknown Currency</td><td></td><td>XXX</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">976</td><td>CDF</td><td>Congolese Franc</td><td></td><td>CDF</td><td class="number">2</td></tr>
+            <tr><td class="number">32</td><td>ARS</td><td>Argentine Peso</td><td>peso argentino</td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">242</td><td>FJD</td><td>Fijian Dollar</td><td></td><td>FJD</td><td class="number">2</td></tr>
+            <tr><td class="number">44</td><td>BSD</td><td>Bahamian Dollar</td><td></td><td>BSD</td><td class="number">2</td></tr>
+            <tr><td class="number">524</td><td>NPR</td><td>Nepalese Rupee</td><td></td><td>NPR</td><td class="number">2</td></tr>
+            <tr><td class="number">776</td><td>TOP</td><td>Tongan Paʻanga</td><td></td><td>TOP</td><td class="number">2</td></tr>
+            <tr><td class="number">710</td><td>ZAR</td><td>South African Rand</td><td></td><td>R</td><td class="number">2</td></tr>
+            <tr><td class="number">480</td><td>MUR</td><td>Mauritian Rupee</td><td></td><td>MUR</td><td class="number">2</td></tr>
+            <tr><td class="number">654</td><td>SHP</td><td>Saint Helena Pound</td><td></td><td>SHP</td><td class="number">2</td></tr>
+            <tr><td class="number">400</td><td>JOD</td><td>Jordanian Dinar</td><td></td><td>د.أ.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">756</td><td>CHF</td><td>Swiss Franc</td><td>franc suisse, Franco Svizzero, Schweizer Franken</td><td>SFr.</td><td class="number">2</td></tr>
+            <tr><td class="number">203</td><td>CZK</td><td>Czech Republic Koruna</td><td></td><td>Kč</td><td class="number">2</td></tr>
+            <tr><td class="number">752</td><td>SEK</td><td>Swedish Krona</td><td>svensk krona</td><td>kr</td><td class="number">2</td></tr>
+            <tr><td class="number">694</td><td>SLL</td><td>Sierra Leonean Leone</td><td></td><td>SLL</td><td class="number">2</td></tr>
+            <tr><td class="number">388</td><td>JMD</td><td>Jamaican Dollar</td><td></td><td>JMD</td><td class="number">2</td></tr>
+            <tr><td class="number">626</td><td>TPE</td><td>Timorese Escudo</td><td></td><td>TPE</td><td class="number">0</td></tr>
+            <tr><td class="number">100</td><td>BGL</td><td>Bulgarian Hard Lev</td><td></td><td>BGL</td><td class="number">2</td></tr>
+            <tr><td class="number">946</td><td>ROL</td><td>Romanian Leu (1952-2006)</td><td></td><td>ROL</td><td class="number">2</td></tr>
+            <tr><td class="number">986</td><td>BRL</td><td>Brazilian Real</td><td>Real brasileiro</td><td>R$</td><td class="number">2</td></tr>
+            <tr><td class="number">372</td><td>IEP</td><td>Irish Pound</td><td></td><td>IEP</td><td class="number">2</td></tr>
+            <tr><td class="number">945</td><td>AYM</td><td>AYM</td><td></td><td>AYM</td><td class="number">2</td></tr>
+            <tr><td class="number">578</td><td>NOK</td><td>Norwegian Krone</td><td></td><td>kr</td><td class="number">2</td></tr>
+            <tr><td class="number">48</td><td>BHD</td><td>Bahraini Dinar</td><td></td><td>د.ب.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">440</td><td>LTL</td><td>Lithuanian Litas</td><td></td><td>LTL</td><td class="number">2</td></tr>
+            <tr><td class="number">60</td><td>BMD</td><td>Bermudan Dollar</td><td></td><td>BMD</td><td class="number">2</td></tr>
+            <tr><td class="number">64</td><td>BTN</td><td>Bhutanese Ngultrum</td><td></td><td>BTN</td><td class="number">2</td></tr>
+            <tr><td class="number">886</td><td>YER</td><td>Yemeni Rial</td><td></td><td>ر.ي.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">426</td><td>LSL</td><td>Lesotho Loti</td><td></td><td>LSL</td><td class="number">2</td></tr>
+            <tr><td class="number">963</td><td>XTS</td><td>Testing Currency Code</td><td></td><td>XTS</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">428</td><td>LVL</td><td>Latvian Lats</td><td></td><td>LVL</td><td class="number">2</td></tr>
+            <tr><td class="number">470</td><td>MTL</td><td>Maltese Lira</td><td></td><td>MTL</td><td class="number">2</td></tr>
+            <tr><td class="number">36</td><td>AUD</td><td>Australian Dollar</td><td></td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">604</td><td>PEN</td><td>Peruvian Sol</td><td>nuevo sol peruano</td><td>S/.</td><td class="number">2</td></tr>
+            <tr><td class="number">156</td><td>CNY</td><td>Chinese Yuan</td><td>人民币</td><td>￥</td><td class="number">2</td></tr>
+            <tr><td class="number">340</td><td>HNL</td><td>Honduran Lempira</td><td>lempira hondureño</td><td>L</td><td class="number">2</td></tr>
+            <tr><td class="number">332</td><td>HTG</td><td>Haitian Gourde</td><td></td><td>HTG</td><td class="number">2</td></tr>
+            <tr><td class="number">0</td><td>XFO</td><td>French Gold Franc</td><td></td><td>XFO</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">958</td><td>XBD</td><td>European Unit of Account (XBD)</td><td></td><td>XBD</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">792</td><td>TRL</td><td>Turkish Lira (1922-2005)</td><td></td><td>TRL</td><td class="number">0</td></tr>
+            <tr><td class="number">981</td><td>GEL</td><td>Georgian Lari</td><td></td><td>GEL</td><td class="number">2</td></tr>
+            <tr><td class="number">931</td><td>CUC</td><td>Cuban Convertible Peso</td><td></td><td>CUC</td><td class="number">2</td></tr>
+            <tr><td class="number">788</td><td>TND</td><td>Tunisian Dinar</td><td></td><td>د.ت.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">40</td><td>ATS</td><td>Austrian Schilling</td><td></td><td>ATS</td><td class="number">2</td></tr>
+            <tr><td class="number">250</td><td>FRF</td><td>French Franc</td><td></td><td>FRF</td><td class="number">2</td></tr>
+            <tr><td class="number">724</td><td>ESP</td><td>Spanish Peseta</td><td></td><td>ESP</td><td class="number">0</td></tr>
+            <tr><td class="number">598</td><td>PGK</td><td>Papua New Guinean Kina</td><td></td><td>PGK</td><td class="number">2</td></tr>
+            <tr><td class="number">800</td><td>UGX</td><td>Ugandan Shilling</td><td></td><td>UGX</td><td class="number">0</td></tr>
+            <tr><td class="number">949</td><td>TRY</td><td>Turkish Lira</td><td></td><td>TL</td><td class="number">2</td></tr>
+            <tr><td class="number">705</td><td>SIT</td><td>Slovenian Tolar</td><td></td><td>SIT</td><td class="number">2</td></tr>
+            <tr><td class="number">938</td><td>SDG</td><td>Sudanese Pound</td><td></td><td>ج.س.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">959</td><td>XAU</td><td>Gold</td><td></td><td>XAU</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">380</td><td>ITL</td><td>Italian Lira</td><td></td><td>ITL</td><td class="number">0</td></tr>
+            <tr><td class="number">116</td><td>KHR</td><td>Cambodian Riel</td><td></td><td>KHR</td><td class="number">2</td></tr>
+            <tr><td class="number">858</td><td>UYU</td><td>Uruguayan Peso</td><td>peso uruguayo</td><td>NU$</td><td class="number">2</td></tr>
+            <tr><td class="number">970</td><td>COU</td><td>COU</td><td></td><td>COU</td><td class="number">2</td></tr>
+            <tr><td class="number">450</td><td>MGF</td><td>Malagasy Franc</td><td></td><td>MGF</td><td class="number">0</td></tr>
+            <tr><td class="number">170</td><td>COP</td><td>Colombian Peso</td><td>peso colombiano</td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">144</td><td>LKR</td><td>Sri Lankan Rupee</td><td></td><td>LKR</td><td class="number">2</td></tr>
+            <tr><td class="number">974</td><td>BYR</td><td>Belarusian Ruble (2000-2016)</td><td></td><td>BYR</td><td class="number">0</td></tr>
+            <tr><td class="number">533</td><td>AWG</td><td>Aruban Florin</td><td></td><td>AWG</td><td class="number">2</td></tr>
+            <tr><td class="number">977</td><td>BAM</td><td>Bosnia-Herzegovina Convertible Mark</td><td>Bosansko-Hercegovačka konvertibilna marka</td><td>КМ.</td><td class="number">2</td></tr>
+            <tr><td class="number">998</td><td>USS</td><td>US Dollar (Same day)</td><td></td><td>USS</td><td class="number">2</td></tr>
+            <tr><td class="number">360</td><td>IDR</td><td>Indonesian Rupiah</td><td></td><td>Rp</td><td class="number">2</td></tr>
+            <tr><td class="number">554</td><td>NZD</td><td>New Zealand Dollar</td><td></td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">961</td><td>XAG</td><td>Silver</td><td></td><td>XAG</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">944</td><td>AZN</td><td>Azerbaijan Manat</td><td></td><td>AZN</td><td class="number">2</td></tr>
+            <tr><td class="number">943</td><td>MZN</td><td>Mozambican Metical</td><td></td><td>MZN</td><td class="number">2</td></tr>
+            <tr><td class="number">532</td><td>ANG</td><td>Netherlands Antillean Guilder</td><td></td><td>ANG</td><td class="number">2</td></tr>
+            <tr><td class="number">933</td><td>BYN</td><td>Belarusian Ruble</td><td></td><td>Руб</td><td class="number">2</td></tr>
+            <tr><td class="number">124</td><td>CAD</td><td>Canadian Dollar</td><td>dollar canadien</td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">979</td><td>MXV</td><td>Mexican Investment Unit</td><td></td><td>MXV</td><td class="number">2</td></tr>
+            <tr><td class="number">957</td><td>XBC</td><td>European Unit of Account (XBC)</td><td></td><td>XBC</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">807</td><td>MKD</td><td>Macedonian Denar</td><td></td><td>Den</td><td class="number">2</td></tr>
+            <tr><td class="number">740</td><td>SRG</td><td>Surinamese Guilder</td><td></td><td>SRG</td><td class="number">2</td></tr>
+            <tr><td class="number">414</td><td>KWD</td><td>Kuwaiti Dinar</td><td></td><td>د.ك.‏</td><td class="number">3</td></tr>
+            <tr><td class="number">950</td><td>XAF</td><td>CFA Franc BEAC</td><td></td><td>XAF</td><td class="number">0</td></tr>
+            <tr><td class="number">810</td><td>RUR</td><td>Russian Ruble (1991&minus;1998)</td><td></td><td>RUR</td><td class="number">2</td></tr>
+            <tr><td class="number">51</td><td>AMD</td><td>Armenian Dram</td><td></td><td>AMD</td><td class="number">2</td></tr>
+            <tr><td class="number">104</td><td>MMK</td><td>Myanma Kyat</td><td></td><td>MMK</td><td class="number">2</td></tr>
+            <tr><td class="number">72</td><td>BWP</td><td>Botswanan Pula</td><td></td><td>BWP</td><td class="number">2</td></tr>
+            <tr><td class="number">942</td><td>ZWN</td><td>ZWN</td><td></td><td>ZWN</td><td class="number">2</td></tr>
+            <tr><td class="number">8</td><td>ALL</td><td>Albanian Lek</td><td></td><td>Lek</td><td class="number">2</td></tr>
+            <tr><td class="number">780</td><td>TTD</td><td>Trinidad and Tobago Dollar</td><td></td><td>TTD</td><td class="number">2</td></tr>
+            <tr><td class="number">208</td><td>DKK</td><td>Danish Krone</td><td></td><td>kr</td><td class="number">2</td></tr>
+            <tr><td class="number">985</td><td>PLN</td><td>Polish Zloty</td><td></td><td>zł</td><td class="number">2</td></tr>
+            <tr><td class="number">196</td><td>CYP</td><td>Cypriot Pound</td><td></td><td>CYP</td><td class="number">2</td></tr>
+            <tr><td class="number">246</td><td>FIM</td><td>Finnish Markka</td><td></td><td>FIM</td><td class="number">2</td></tr>
+            <tr><td class="number">948</td><td>CHW</td><td>CHW</td><td></td><td>CHW</td><td class="number">2</td></tr>
+            <tr><td class="number">994</td><td>XSU</td><td>Sucre</td><td></td><td>XSU</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">484</td><td>MXN</td><td>Mexican Peso</td><td>peso mexicano</td><td>$</td><td class="number">2</td></tr>
+            <tr><td class="number">953</td><td>XPF</td><td>CFP Franc</td><td></td><td>XPF</td><td class="number">0</td></tr>
+            <tr><td class="number">348</td><td>HUF</td><td>Hungarian Forint</td><td></td><td>Ft</td><td class="number">2</td></tr>
+            <tr><td class="number">901</td><td>TWD</td><td>New Taiwan Dollar</td><td>新臺幣</td><td>NT$</td><td class="number">2</td></tr>
+            <tr><td class="number">50</td><td>BDT</td><td>Bangladeshi Taka</td><td></td><td>BDT</td><td class="number">2</td></tr>
+            <tr><td class="number">956</td><td>XBB</td><td>European Monetary Unit</td><td></td><td>XBB</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">31</td><td>AZM</td><td>Azerbaijani Manat (1993-2006)</td><td></td><td>AZM</td><td class="number">2</td></tr>
+            <tr><td class="number">508</td><td>MZM</td><td>Mozambican Metical (1980-2006)</td><td></td><td>MZM</td><td class="number">2</td></tr>
+            <tr><td class="number">703</td><td>SKK</td><td>Slovak Koruna</td><td></td><td>SKK</td><td class="number">2</td></tr>
+            <tr><td class="number">398</td><td>KZT</td><td>Kazakhstani Tenge</td><td></td><td>KZT</td><td class="number">2</td></tr>
+            <tr><td class="number">52</td><td>BBD</td><td>Barbadian Dollar</td><td></td><td>BBD</td><td class="number">2</td></tr>
+            <tr><td class="number">971</td><td>AFN</td><td>Afghan Afghani</td><td></td><td>AFN</td><td class="number">2</td></tr>
+            <tr><td class="number">760</td><td>SYP</td><td>Syrian Pound</td><td></td><td>ل.س.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">590</td><td>PAB</td><td>Panamanian Balboa</td><td>balboa panameño</td><td>B</td><td class="number">2</td></tr>
+            <tr><td class="number">997</td><td>USN</td><td>US Dollar (Next day)</td><td></td><td>USN</td><td class="number">2</td></tr>
+            <tr><td class="number">410</td><td>KRW</td><td>South Korean Won</td><td>대한민국 원</td><td>￦</td><td class="number">0</td></tr>
+            <tr><td class="number">929</td><td>MRU</td><td>Mauritanian Ouguiya</td><td></td><td>MRU</td><td class="number">2</td></tr>
+            <tr><td class="number">4</td><td>AFA</td><td>Afghan Afghani (1927-2002)</td><td></td><td>AFA</td><td class="number">2</td></tr>
+            <tr><td class="number">232</td><td>ERN</td><td>Eritrean Nakfa</td><td></td><td>ERN</td><td class="number">2</td></tr>
+            <tr><td class="number">624</td><td>GWP</td><td>Guinea-Bissau Peso</td><td></td><td>GWP</td><td class="number">2</td></tr>
+            <tr><td class="number">112</td><td>BYB</td><td>Belarusian Ruble (1994&minus;1999)</td><td></td><td>BYB</td><td class="number">0</td></tr>
+            <tr><td class="number">222</td><td>SVC</td><td>Salvadoran Colón</td><td>colón salvadoreño</td><td>C</td><td class="number">2</td></tr>
+            <tr><td class="number">56</td><td>BEF</td><td>Belgian Franc</td><td></td><td>BEF</td><td class="number">0</td></tr>
+            <tr><td class="number">404</td><td>KES</td><td>Kenyan Shilling</td><td></td><td>KES</td><td class="number">2</td></tr>
+            <tr><td class="number">728</td><td>SSP</td><td>South Sudanese Pound</td><td></td><td>SSP</td><td class="number">2</td></tr>
+            <tr><td class="number">0</td><td>XFU</td><td>French UIC-Franc</td><td></td><td>XFU</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">678</td><td>STD</td><td>São Tomé and Príncipe Dobra</td><td></td><td>STD</td><td class="number">2</td></tr>
+            <tr><td class="number">964</td><td>XPD</td><td>Palladium</td><td></td><td>XPD</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">965</td><td>XUA</td><td>ADB Unit of Account</td><td></td><td>XUA</td><td class="number">&minus;1</td></tr>
+            <tr><td class="number">940</td><td>UYI</td><td>UYI</td><td></td><td>UYI</td><td class="number">0</td></tr>
+            <tr><td class="number">566</td><td>NGN</td><td>Nigerian Naira</td><td></td><td>NGN</td><td class="number">2</td></tr>
+            <tr><td class="number">12</td><td>DZD</td><td>Algerian Dinar</td><td></td><td>د.ج.‏</td><td class="number">2</td></tr>
+            <tr><td class="number">496</td><td>MNT</td><td>Mongolian Tugrik</td><td></td><td>MNT</td><td class="number">2</td></tr>
+            <tr><td class="number">364</td><td>IRR</td><td>Iranian Rial</td><td></td><td>IRR</td><td class="number">2</td></tr>
+            <tr><td class="number">233</td><td>EEK</td><td>Estonian Kroon</td><td></td><td>EEK</td><td class="number">2</td></tr>
+            <tr><td class="number">972</td><td>TJS</td><td>Tajikistani Somoni</td><td></td><td>TJS</td><td class="number">2</td></tr>
+            <tr><td class="number">516</td><td>NAD</td><td>Namibian Dollar</td><td></td><td>NAD</td><td class="number">2</td></tr>
+            <tr><td class="number">442</td><td>LUF</td><td>Luxembourgian Franc</td><td></td><td>LUF</td><td class="number">0</td></tr>
+            <tr><td class="number">952</td><td>XOF</td><td>CFA Franc BCEAO</td><td></td><td>XOF</td><td class="number">0</td></tr>
+            <tr><td class="number">462</td><td>MVR</td><td>Maldivian Rufiyaa</td><td></td><td>MVR</td><td class="number">2</td></tr>
+            <tr><td class="number">930</td><td>STN</td><td>São Tomé and Príncipe Dobra</td><td></td><td>STN</td><td class="number">2</td></tr>
+            <tr><td class="number">643</td><td>RUB</td><td>Russian Ruble</td><td></td><td>руб.</td><td class="number">2</td></tr>
+            <tr><td class="number">262</td><td>DJF</td><td>Djiboutian Franc</td><td></td><td>DJF</td><td class="number">0</td></tr>
+            <tr><td class="number">586</td><td>PKR</td><td>Pakistani Rupee</td><td></td><td>PKR</td><td class="number">2</td></tr>
+            <tr><td class="number">608</td><td>PHP</td><td>Philippine Peso</td><td></td><td>Php</td><td class="number">2</td></tr>
+            <tr><td class="number">108</td><td>BIF</td><td>Burundian Franc</td><td></td><td>BIF</td><td class="number">0</td></tr>
+            <tr><td class="number">834</td><td>TZS</td><td>Tanzanian Shilling</td><td></td><td>TZS</td><td class="number">2</td></tr>
+            <tr><td class="number">528</td><td>NLG</td><td>Dutch Guilder</td><td></td><td>NLG</td><td class="number">2</td></tr>
+            <tr><td class="number">328</td><td>GYD</td><td>Guyanaese Dollar</td><td></td><td>GYD</td><td class="number">2</td></tr>
+            <tr><td class="number">376</td><td>ILS</td><td>Israeli New Sheqel</td><td></td><td>ש"ח</td><td class="number">2</td></tr>
+            <tr><td class="number">706</td><td>SOS</td><td>Somali Shilling</td><td></td><td>SOS</td><td class="number">2</td></tr>
+            <tr><td class="number">84</td><td>BZD</td><td>Belize Dollar</td><td></td><td>BZD</td><td class="number">2</td></tr>
+            <tr><td class="number">320</td><td>GTQ</td><td>Guatemalan Quetzal</td><td>quetzal guatemalteco</td><td>Q</td><td class="number">2</td></tr>
+            <tr><td class="number">417</td><td>KGS</td><td>Kyrgystani Som</td><td></td><td>KGS</td><td class="number">2</td></tr>
+            <tr><td class="number">795</td><td>TMM</td><td>Turkmenistani Manat (1993-2009)</td><td></td><td>TMM</td><td class="number">2</td></tr>
+            <tr><td class="number">984</td><td>BOV</td><td>Bolivian Mvdol</td><td></td><td>BOV</td><td class="number">2</td></tr>
+            <tr><td class="number">238</td><td>FKP</td><td>Falkland Islands Pound</td><td></td><td>FKP</td><td class="number">2</td></tr>
+        </table>
+        <p>* How many digits for subdivisions of the unit. Most currencies are subdivided into 100 cents (hence this column shows 2 for most currencies). In a few cases, a dinar is subdivided into 1,000 darahim (which corresponds to 3 in this column). A few currencies, like the Japanese yen, are not subdivided at all (so there's a 0 in this column). And for precious metals, like gold or silver, and a few other currencies, subdivision is not applicable (hence &minus;1 in this column).</p>
+
     </body>
 </html>
