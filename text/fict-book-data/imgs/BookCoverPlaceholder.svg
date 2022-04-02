@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg128"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Book Cover Placeholder.svg">
+  <defs
+     id="defs122" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1267"
+     inkscape:window-height="728"
+     inkscape:window-x="83"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata125">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;fill:#fcaf3e;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="3.2697405e-06"
+       y="133.04762"
+       id="text132"><tspan
+         sodipodi:role="line"
+         id="tspan130"
+         x="3.2697405e-06"
+         y="133.04762"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS Bold Italic';fill:#fcaf3e;stroke-width:0.264583">PLACE</tspan><tspan
+         sodipodi:role="line"
+         x="3.2697405e-06"
+         y="198.75545"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS Bold Italic';fill:#fcaf3e;stroke-width:0.264583"
+         id="tspan134">HOLDER</tspan></text>
+    <rect
+       style="fill:#fcaf3e;stroke:#000000;stroke-width:0.499999"
+       id="rect140"
+       width="157.99405"
+       height="65.011902"
+       x="24.190477"
+       y="13.607142"
+       ry="6.803575" />
+    <rect
+       style="fill:#fcaf3e;stroke:#000000;stroke-width:0.499999"
+       id="rect142"
+       width="151.94643"
+       height="73.327377"
+       x="30.994047"
+       y="212.42261"
+       ry="6.803575" />
+  </g>
+</svg>

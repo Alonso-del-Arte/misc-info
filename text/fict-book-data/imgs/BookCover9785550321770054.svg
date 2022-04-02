@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg56"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="VAERS Book Cover.svg">
+  <defs
+     id="defs50">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter96"
+       x="-0.090010162"
+       width="1.1800203"
+       y="-0.064280531"
+       height="1.1285611">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.4142608"
+         id="feGaussianBlur98" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer3"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1267"
+     inkscape:window-height="728"
+     inkscape:window-x="52"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata53">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="cow"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:169.333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-18.142862"
+       y="258.53574"
+       id="text60"><tspan
+         sodipodi:role="line"
+         id="tspan58"
+         x="-18.142862"
+         y="258.53574"
+         style="font-size:254px;fill:#d3d7cf;stroke-width:0.264583">🐄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="9.0714254"
+       y="267.60715"
+       id="text85"><tspan
+         sodipodi:role="line"
+         id="tspan83"
+         x="9.0714254"
+         y="267.60715"
+         style="font-size:50.8px;fill:#d3d7cf;stroke-width:0.264583">☤</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="text shadows"
+     style="opacity:0.5;filter:url(#filter96)">
+    <path
+       style="fill:#729fcf;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 54.428572,15.119047 c 36.350734,-8.5430479 68.895468,-3.765103 101.297618,1.511905 20.3154,6.255994 32.7752,17.225352 43.08928,29.482142 6.04566,6.767854 9.44746,13.913402 1.51191,22.678572 C 190.52662,83.035881 178.84245,87.863058 167.06547,92.22619 127.29299,100.50658 89.182747,97.151303 51.40476,91.470238 37.611602,85.224714 23.237172,80.723006 11.339286,68.791666 10.182759,59.868828 3.8118451,56.160376 9.8273808,40.065475 22.130833,27.477312 36.105702,17.674846 54.428572,15.119047 Z"
+       id="path88"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#729fcf;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 11.339286,195.79166 H 200.32738 V 222.25 l -58.96429,3.02381 -6.80357,12.09524 5.29167,9.07142 c 5.24023,3.94433 18.79331,1.84301 31.74999,0 l 10.58334,12.09524 c 2.16244,3.07652 -2.91004,9.39252 -4.53571,14.3631 -1.92883,4.7877 -6.91724,9.57539 -12.85119,14.36309 H 61.988093 C 55.443624,284.97269 49.156283,281.91209 44.60119,273.65475 L 38.553572,254 l 6.80357,-7.55953 c 12.851191,-2.31481 25.702381,-1.78072 38.553572,-2.26785 v -6.80357 l -4.535715,-5.29167 -3.779761,-10.58333 c -20.712067,0.60271 -41.00773,0.3726 -59.720238,-3.02381 -5.01143,-9.89254 -5.537283,-16.7947 -4.535714,-22.67858 z"
+       id="path90"
+       sodipodi:nodetypes="cccccccccccccccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="text">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5778px;line-height:1;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="105.92622"
+       y="38.55357"
+       id="text65"><tspan
+         sodipodi:role="line"
+         id="tspan63"
+         x="105.92622"
+         y="38.55357"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583">VAERS:</tspan><tspan
+         sodipodi:role="line"
+         x="105.92622"
+         y="61.131371"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan67">Fact &amp; Fiction,</tspan><tspan
+         sodipodi:role="line"
+         x="105.92622"
+         y="83.709167"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan69">Explained</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:1;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="106.89841"
+       y="214.69048"
+       id="text73"><tspan
+         sodipodi:role="line"
+         id="tspan71"
+         x="106.89841"
+         y="214.69048"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583">Dr. Romancepreet</tspan><tspan
+         sodipodi:role="line"
+         x="106.89841"
+         y="231.62378"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan79">Kaur</tspan><tspan
+         sodipodi:role="line"
+         x="106.89841"
+         y="248.55707"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan75">&amp;</tspan><tspan
+         sodipodi:role="line"
+         x="106.89841"
+         y="265.49036"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan77">Dr. Elizabeth</tspan><tspan
+         sodipodi:role="line"
+         x="106.89841"
+         y="282.42368"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan81">Williams</tspan></text>
+  </g>
+</svg>
