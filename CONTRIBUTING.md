@@ -1,4 +1,5 @@
-This project is now open to Hacktoberfest 2023.
+This project is now closed to Hacktoberfest 2023. It will probably be open to 
+Hacktoberfest 2024.
 
 # Guidelines for Hacktoberfest contributors
 
