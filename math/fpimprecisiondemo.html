@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Floating Point Imprecision Demo</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="DESCRIPTION GOES HERE" />
+        <meta name="author" content="Alonso del Arte" />
+        <style type="text/css"><!--
+            tr:nth-child(even) { background: #d8d8d8 }
+            td { font-size: 18pt; text-align: right; padding: 0.5em }
+            code { font-size: 8pt }
+            code:hover { font-size: inherit }
+        //--></style>
+        <script type="application/javascript"><!-- 
+                
+                function populate(start, end) {
+                    const demoTable = document.getElementsByTagName("tbody").item(0);
+                    console.log(demoTable);
+                    for (var n = start; n <= end; n++) {
+                        const root = Math.sqrt(n);
+                        const square = root * root;
+                        const deviation = n - square;
+                        if (deviation != 0.0) {
+                            const row = demoTable.insertRow(-1);
+                            const numberCell = row.insertCell(0);
+                            numberCell.innerHTML = n;
+                            const rootCell = row.insertCell(1);
+                            rootCell.innerHTML = root;
+                            const squareCell = row.insertCell(2);
+                            squareCell.innerHTML = square;
+                            const devCell = row.insertCell(3);
+                            devCell.innerHTML = deviation
+                        }
+                    }
+                }
+            
+        //--></script>
+    </head>
+    <body onload="populate(1, 200);">
+        <h1>Demonstration of the imprecision of floating point</h1>
+        <p>The 64-bit IEEE-754 floating point format is good enough for most practical purposes, provided one does not demand too much in the way of precision. For example, for many integers <i>n</i> that can be represented by 64-bit floating point, the format is incapable of representing &radic;<i>n</i> precisely enough to recover the original number exactly, as the following table shows.</p>
+        <table id="demo">
+            <thead>
+                <th><i>n</i></th>
+                <th>sqrt(<i>n</i>)</th>
+                <th>sqrt(<i>n</i>)<sup>2</sup></th>
+                <th>Deviation</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </body>
+</html>
