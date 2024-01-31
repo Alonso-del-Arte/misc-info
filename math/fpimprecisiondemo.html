@@ -40,14 +40,14 @@
     <body onload="populate(1, 200);">
         <h1>Demonstration of the imprecision of floating point</h1>
         <p>The 64-bit IEEE-754 floating point format is good enough for most practical purposes, provided one does not demand too much in the way of precision. For example, for many integers <i>n</i> that can be represented by 64-bit floating point, the format is incapable of representing &radic;<i>n</i> precisely enough to recover the original number exactly, as the following table shows.</p>
-        <table id="demo">
+        <table>
             <thead>
                 <th><i>n</i></th>
                 <th>sqrt(<i>n</i>)</th>
                 <th>sqrt(<i>n</i>)<sup>2</sup></th>
                 <th>Deviation</th>
             </thead>
-            <tbody id="tableBody"></tbody>
+            <tbody></tbody>
         </table>
     </body>
 </html>
