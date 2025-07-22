@@ -1,7 +1,7 @@
 @import "dark.css" (prefers-color-scheme: dark);
 @import "light.css" (prefers-color-scheme: light);
 
-p, li { font-family: Georgia, serif }
+h1, h2, h3, p, li { font-family: Georgia, serif }
 a { text-decoration: none }
 a:hover { text-decoration: underline; font-weight: bold }
 a:active { font-weight: bolder }
