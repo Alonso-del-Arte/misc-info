@@ -5,12 +5,25 @@
         <title>Navigator Info</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="DESCRIPTION GOES HERE" />
+        <meta name="description" content="Exposes some information about the 
+user's Web browser through the navigator object" />
         <meta name="author" content="Alonso del Arte" />
     </head>
     <body>
         <h1>Navigator Info</h1>
         <p>Certain information about your Web browser is available to webpages 
 through the <code>navigator</code> object in JavaScript.</p>
+        <script><!--
+                document.writeln("<ul>")
+                document.writeln("<li>appName = " + navigator.appName + "</li>")
+                document.writeln("<li>appVersion = " + navigator.appVersion 
+                                 + "</li>")
+                document.writeln("<li>platform = " + navigator.platform 
+                                 + "</li>")
+                document.writeln("<li>userAgent = " + navigator.userAgent 
+                                 + "</li>")
+                document.writeln("<li>vendor = " + navigator.vendor + "</li>")
+                document.writeln("</ul>")
+        // --></script>
     </body>
 </html>
