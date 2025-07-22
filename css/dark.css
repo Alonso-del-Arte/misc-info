@@ -1,0 +1,6 @@
+body { background-color: black }
+h1, h2, h3, p, li { color: white }
+a:link { color: lightblue }
+a:visited { color: #cbc3e3 }
+a:hover { color: orange }
+a:active { color: gray }
