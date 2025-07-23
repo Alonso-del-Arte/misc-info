@@ -23,25 +23,37 @@ browser you use to view this page. These are not all the properties that are
 available in any particular Web browser.</p>
         <script><!--
                 document.writeln("<ul>")
+                document.writeln("<li><code>appCodeName</code> = \"" 
+                                 + navigator.appCodeName 
+                                 + "\" (deprecated property)</li>")
                 document.writeln("<li><code>appName</code> = \"" 
-                                 + navigator.appName + "\"</li>")
+                                 + navigator.appName 
+                                 + "\" (deprecated property)</li>")
                 document.writeln("<li><code>appVersion</code> = \"" 
-                                 + navigator.appVersion + "\"</li>")
+                                 + navigator.appVersion 
+                                 + "\" (deprecated property)</li>")
                 document.writeln("<li><code>cookieEnabled</code> = " 
                                  + navigator.cookieEnabled + "</li>")
+                document.writeln("<li><code>language</code> = \"" 
+                                 + navigator.language + "\"</li>")
+                document.writeln("<li><code>languages</code> = \"" 
+                                 + navigator.languages + "\"</li>")
+                document.writeln("<li><code>maxTouchPoints</code> = " 
+                                 + navigator.maxTouchPoints + "</li>")
                 document.writeln("<li><code>onLine</code> = " + navigator.onLine 
                                  + "</li>")
                 document.writeln("<li><code>pdfViewerEnabled</code> = " 
                                  + navigator.pdfViewerEnabled + "</li>")
                 document.writeln("<li><code>platform</code> = \"" 
-                                 + navigator.platform + "\"</li>")
+                                 + navigator.platform + "\" (deprecated property)</li>")
                 document.writeln("<li><code>standalone</code> = " 
                                  + navigator.standalone 
                                  + " (maybe Apple devices only)</li>")
                 document.writeln("<li><code>userAgent</code> = \"" 
                                  + navigator.userAgent + "\"</li>")
                 document.writeln("<li><code>vendor</code> = \"" 
-                                 + navigator.vendor + "\"</li>")
+                                 + navigator.vendor 
+                                 + "\" (deprecated property)</li>")
                 document.writeln("</ul>")
         // --></script>
     </body>
