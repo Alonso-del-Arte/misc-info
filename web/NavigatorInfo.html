@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Navigator Info</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Exposes some information about the 
+user's Web browser through the navigator object" />
+        <meta name="author" content="Alonso del Arte" />
+        <link rel="stylesheet" href="../css/general.css" type="text/css" />
+        <script></script>
+        <style type="text/css"><!-- 
+            li::marker { color: gray }
+        // --></style>
+    </head>
+    <body>
+        <h1>Navigator Info</h1>
+        <p>Certain information about your Web browser is available to webpages 
+through the <code>navigator</code> object in JavaScript.</p>
+        <p>The following list of properties should vary depending on which Web 
+browser you use to view this page. These are not all the properties that are 
+available in any particular Web browser.</p>
+        <script><!--
+                document.writeln("<ul>")
+                document.writeln("<li><code>appCodeName</code> = \"" 
+                                 + navigator.appCodeName 
+                                 + "\" (deprecated property)</li>")
+                document.writeln("<li><code>appName</code> = \"" 
+                                 + navigator.appName 
+                                 + "\" (deprecated property)</li>")
+                document.writeln("<li><code>appVersion</code> = \"" 
+                                 + navigator.appVersion 
+                                 + "\" (deprecated property)</li>")
+                document.writeln("<li><code>cookieEnabled</code> = " 
+                                 + navigator.cookieEnabled + "</li>")
+                document.writeln("<li><code>language</code> = \"" 
+                                 + navigator.language + "\"</li>")
+                document.writeln("<li><code>languages</code> = \"" 
+                                 + navigator.languages + "\"</li>")
+                document.writeln("<li><code>maxTouchPoints</code> = " 
+                                 + navigator.maxTouchPoints + "</li>")
+                document.writeln("<li><code>onLine</code> = " + navigator.onLine 
+                                 + "</li>")
+                document.writeln("<li><code>pdfViewerEnabled</code> = " 
+                                 + navigator.pdfViewerEnabled + "</li>")
+                document.writeln("<li><code>platform</code> = \"" 
+                                 + navigator.platform + "\" (deprecated property)</li>")
+                document.writeln("<li><code>standalone</code> = " 
+                                 + navigator.standalone 
+                                 + " (maybe Apple devices only)</li>")
+                document.writeln("<li><code>userAgent</code> = \"" 
+                                 + navigator.userAgent + "\"</li>")
+                document.writeln("<li><code>vendor</code> = \"" 
+                                 + navigator.vendor 
+                                 + "\" (deprecated property)</li>")
+                document.writeln("</ul>")
+        // --></script>
+    </body>
+</html>

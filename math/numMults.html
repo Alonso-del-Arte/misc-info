@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiples of a given number</title>
+<meta name="description" content="Lists the multiples of a given integer" />
+<meta name="author" content="Alonso del Arte" />
+<style type="text/css"><!--
+
+  span.squareMult { font-weight: bold }
+
+  @media only screen and (min-width: 480px) {
+    body { margin-left: 35%; margin-right: 30% }
+  }
+
+// --></style>
+<script type="text/javascript"><!--
+
+  var squaresList = Array(0, 1);
+
+  var threshold, multList;
+
+  function initialize() {
+    threshold = 100;
+    multList = document.getElementById("multiplesList");
+    var threshRoot = Math.sqrt(threshold);
+    for (i = 2; i < threshRoot; i++) {
+      const square = i * i;
+      squaresList.push(square)
+    }
+  }
+
+  function recalc() {
+    var multiplier = document.forms["multiplesCalc"]["givenNum"].value;
+    var multiplesString = '<span class="squareMult">0</span>, '
+    var curr;
+    for (i = 1; i < threshold; i++) {
+      curr = i * multiplier;
+      if (squaresList.includes(i)) {
+        multiplesString = multiplesString + 
+            '<span class="squareMult">' + curr + "</span>, "
+      } else {
+        multiplesString = multiplesString + curr + ", "
+      }
+    }
+    multList.innerHTML = multiplesString + "..."
+  }
+
+// --></script>
+</head>
+<body onload="initialize()">
+
+<h1>Multiples of a given number</h1>
+
+<form name="multiplesCalc">
+
+<input type="number" name="givenNum" value="10" min="0" step="1" oninput="recalc()">
+
+</form>
+
+<p id="multiplesList"><span class="squareMult">0</span>, <span class="squareMult">10</span>, 20, 30, <span class="squareMult">40</span>, 50, 60, 70, 80, <span class="squareMult">90</span>, 100, 110, 120, 130, 140, 150, <span class="squareMult">160</span>, 170, 180, 190, 200, 210, 220, 230, 240, <span class="squareMult">250</span>, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, <span class="squareMult">360</span>, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460, 470, 480, <span class="squareMult">490</span>, 500, 510, 520, 530, 540, 550, 560, 570, 580, 590, 600, 610, 620, 630, <span class="squareMult">640</span>, 650, 660, 670, 680, 690, 700, 710, 720, 730, 740, 750, 760, 770, 780, 790, 800, <span class="squareMult">810</span>, 820, 830, 840, 850, 860, 870, 880, 890, 900, 910, 920, 930, 940, 950, 960, 970, 980, 990, ...</p>
+
+</body>
+</html>
