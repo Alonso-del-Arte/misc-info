@@ -1,0 +1,8 @@
+{
+    "numProps": {
+        "number": 21,
+        "divisors": [1, 3, 7, 21],
+        "isPrime": false,
+        "isTriangular": true
+    }
+}
